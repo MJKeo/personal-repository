@@ -1,12 +1,14 @@
 import React from 'react';
 import './App.css';
-import {BrowserRouter as Router, Link} from 'react-router-dom';
-import Route from 'react-router-dom/Route';
-import Projects from './Projects';
-import Home from './Home';
 import Banner from './images/banner2.jpg';
 import BGParticles from './BGParticles';
 import Background from './images/bg2.png'
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import Route from 'react-router-dom/Route';
+import Home from './Home';
+import Projects from './Projects'
+import AboutMe from './AboutMe'
+import Blog from './Blog'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -24,29 +26,12 @@ export default class App extends React.Component {
       });
     }
     render() {
-      const navbar = {
-        background: 'black',
-        opacity: '0.5'
-      };
-      const bannerStyle = {
-        backgroundImage: "url(" + Banner + ")"
-      }
-      const spacer = {
-        height: '100px'
-      }
       const mainDiv = {
         height: '100vh',
         width: '100vw',
         textAlign: 'center',
         backgroundImage: "url(" + Background + ")",
         backgroundSize: '100vw'
-      }
-      const centerElement = {
-        position: 'absolute',
-        width: '100%',
-        top: '40%',
-        transform: 'translate(0, -40%)',
-        opacity: '0.8'
       }
       return (
         // <Router>
@@ -70,12 +55,16 @@ export default class App extends React.Component {
         //     </div>
         //   </Router>
 
-        <div style={mainDiv}>
-          <div style={centerElement}>
-            <h1 class="display-1 font-weight-bold">Michael Keohane</h1>
-            <h1>Welcome</h1>
+        <div>
+          <div style={mainDiv}>
+          <Router>
+            <Route path="/" exact component={Home} />
+            <Route path="/Projects" exact component={Projects} />
+            <Route path="/AboutMe" exact component={AboutMe} />
+            <Route path="/Blog" exact component={Blog} />
+            <BGParticles />
+          </Router>
           </div>
-          <BGParticles />
         </div>
       );
   }
