@@ -1,6 +1,8 @@
 import React, {Component } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './images/logo.jpg';
+import BGParticles from './BGParticles';
+import Background from './images/bg2.png';
 
 class Blog extends Component {
     constructor(props) {
@@ -19,18 +21,16 @@ class Blog extends Component {
       }
     render() {
         const centerElement = {
-            position: 'absolute',
-            width: '100%',
-            top: '45%',
-            left: '1%',
-            transform: 'translate(0, -40%)',
+            position: 'relative',
+            width: '100%'
           }
           const navbar = {
-              position: 'absolute',
+              position: 'fixed',
               background: 'white',
               height: '10vh',
               width: '100vw',
-              left: '0px'
+              left: '0px',
+              top: '0px'
           }
           const logoStyle = {
             borderRadius: '50%',
@@ -44,21 +44,60 @@ class Blog extends Component {
               paddingTop: '1vh'
           }
           const overlay = {
-            position: 'absolute',
+            position: 'relative',
             background: 'white',
-            height: '100%',
-            width: '90%',
+            minHeight: '10vh',
+            width: '80%',
             opacity: '0.8',
-            left: '5%'
+            left: '10%',
+            boxShadow: '1px'
           }
+          const mainDiv = {
+            minHeight: '100vh',
+            width: '100vw',
+            textAlign: 'center',
+            backgroundImage: "url(" + Background + ")",
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: '100% 100%'
+          }
+          const spacer = {
+              height: '16vh'
+          }
+          const smallSpacer = {
+            height: '6vh'
+        }
         return (
             <div class="container-fluid">
+                <div style={spacer}></div>
                 <div style={overlay}>
-                        <div class="container-fluid text-center" style={centerElement}>
+                        <div class="container-fluid text-center">
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
+                            <h1>Blog Page</h1>
                             <h1>Blog Page</h1>
                         </div>
                     </div>
-                <nav class="navbar-sticky" style={navbar}>
+                    <div style={smallSpacer}></div>
+                    <nav class="navbar-sticky" style={navbar}>
                     <div class="mr-auto">
                         <form class="form-inline pl-2" style={navItems}>
                             <Link class="nav-link" to="/"><img class="nav-item" src={Logo} alt=":)" style={logoStyle}/></Link>

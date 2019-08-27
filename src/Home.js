@@ -37,7 +37,7 @@ class Home extends Component {
           }
           const logoStyle = {
             borderRadius: '50%',
-            width: '20vh'
+            width: '30vh'
           }
         return (
           <div>

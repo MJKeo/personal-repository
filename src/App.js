@@ -2,8 +2,8 @@ import React from 'react';
 import './App.css';
 import Banner from './images/banner2.jpg';
 import BGParticles from './BGParticles';
-import Background from './images/bg2.png'
-import {BrowserRouter as Router, Link} from 'react-router-dom';
+import Background from './images/bg2.png';
+import {BrowserRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Home from './Home';
 import Projects from './Projects'
@@ -27,11 +27,12 @@ export default class App extends React.Component {
     }
     render() {
       const mainDiv = {
-        height: '100vh',
+        minHeight: '100vh',
         width: '100vw',
         textAlign: 'center',
         backgroundImage: "url(" + Background + ")",
-        backgroundSize: '100%'
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: '100% 100%'
       }
       return (
         // <Router>
@@ -55,14 +56,14 @@ export default class App extends React.Component {
         //     </div>
         //   </Router>
 
-        <div>
-          <div style={mainDiv}>
+        <div style={mainDiv}>
+          <div>
           <Router>
+            <BGParticles />
             <Route path="/" exact component={Home} />
             <Route path="/Projects" exact component={Projects} />
             <Route path="/AboutMe" exact component={AboutMe} />
             <Route path="/Blog" exact component={Blog} />
-            <BGParticles />
           </Router>
           </div>
         </div>

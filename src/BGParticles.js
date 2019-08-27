@@ -116,10 +116,13 @@ const particleConfig = {
 class BGParticles extends Component {
   render() {
     const particleStyle = {
-      flex: '9'
+      position: 'fixed',
+      left: '0%',
+      top: '0%',
+      height: '100%'
     }
     return (
-        <Particles className="particle-bg" params={particleConfig}/>
+        <Particles className="particle-bg" params={particleConfig} style={particleStyle}/>
     );
   }
 }
