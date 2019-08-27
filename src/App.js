@@ -51,8 +51,9 @@ export default class App extends React.Component {
         left: '0%',
         transform: 'translate(0, -40%)',
       }
-      const translucent = {
-        opacity: '0.8'
+      const welcomeText = {
+        opacity: '0.8',
+        fontSize: '10vh'
       }
       const optionStyle = {
         position: 'relative',
@@ -73,7 +74,7 @@ export default class App extends React.Component {
         left: '0px',
         top: '0px'
     }
-    const logoStyle2 = {
+    const smallLogo = {
       borderRadius: '50%',
       width: '7vh'
     }
@@ -92,7 +93,7 @@ export default class App extends React.Component {
         navigation = (<div>
                 <div style={centerElement}>
                   <img class="nav-item" src={Logo} alt=":)" style={logoStyle}/>
-                  <h1 class="display-1 font-weight-bolder" style={translucent}>Welcome to My Personal Website!</h1>
+                  <h1 class="display-1 font-weight-bolder" style={welcomeText}>Welcome to My Personal Website!</h1>
                   <div>
                       <button type="button" class="btn" style={optionStyle} onClick={() => this.updateState(1)}>About Me</button>
                       <button type="button" class="btn" style={optionStyle} onClick={() => this.updateState(2)}>Projects</button>
@@ -104,7 +105,7 @@ export default class App extends React.Component {
         navigation = (<nav class="navbar-sticky" style={navbar}>
                         <div class="mr-auto">
                           <form class="form-inline pl-2" style={navItems}>
-                              <img class="nav-item" class="pl-1" src={Logo} alt=":)" style={logoStyle2}/>
+                              <img class="nav-item" class="pl-1" src={Logo} alt=":)" style={smallLogo}/>
                               <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(0)}>Home</button>
                               <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(1)}>About Me</button>
                               <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(2)}>Projects</button>
