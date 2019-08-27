@@ -31,7 +31,7 @@ export default class App extends React.Component {
         width: '100vw',
         textAlign: 'center',
         backgroundImage: "url(" + Background + ")",
-        backgroundSize: '100vw'
+        backgroundSize: '100%'
       }
       return (
         // <Router>

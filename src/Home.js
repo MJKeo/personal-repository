@@ -22,7 +22,7 @@ class Home extends Component {
             position: 'absolute',
             width: '100%',
             top: '45%',
-            left: '1%',
+            left: '0%',
             transform: 'translate(0, -40%)',
           }
           const translucent = {
