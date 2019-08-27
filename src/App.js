@@ -79,12 +79,12 @@ export default class App extends React.Component {
       width: '7vh'
     }
     const navSpacer = {
-      width: '2vh'
+      width: '1vw'
     }
     const navText = {
       fontSize: '4vh',
       color: '#1D97C2',
-      paddingLeft: '7vh'
+      paddingLeft: '3vw'
     }
     const navItems = {
         paddingTop: '1vh'
@@ -135,8 +135,8 @@ export default class App extends React.Component {
           <div>
           <Router>
             <BGParticles />
-            {navigation}
             {page}
+            {navigation}
             {/* <Route path="/" exact component={Home} />
             <Route path="/Projects" exact component={Projects} />
             <Route path="/AboutMe" exact component={AboutMe} />
