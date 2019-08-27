@@ -78,9 +78,13 @@ export default class App extends React.Component {
       borderRadius: '50%',
       width: '7vh'
     }
+    const navSpacer = {
+      width: '2vh'
+    }
     const navText = {
       fontSize: '4vh',
-      color: '#1D97C2'
+      color: '#1D97C2',
+      paddingLeft: '7vh'
     }
     const navItems = {
         paddingTop: '1vh'
@@ -105,11 +109,12 @@ export default class App extends React.Component {
         navigation = (<nav class="navbar-sticky" style={navbar}>
                         <div class="mr-auto">
                           <form class="form-inline pl-2" style={navItems}>
-                              <img class="nav-item" class="pl-1" src={Logo} alt=":)" style={smallLogo}/>
-                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(0)}>Home</button>
-                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(1)}>About Me</button>
-                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(2)}>Projects</button>
-                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(3)}>Blog</button>
+                              <h1 style={navSpacer}></h1>
+                              <img class="nav-item" src={Logo} alt=":)" style={smallLogo}/>
+                              <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(0)}>Home</button>
+                              <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(1)}>About Me</button>
+                              <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(2)}>Projects</button>
+                              <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(3)}>Blog</button>
                           </form>
                         </div>
                       </nav>)

@@ -97,17 +97,6 @@ class Blog extends Component {
                         </div>
                     </div>
                     <div style={smallSpacer}></div>
-                    <nav class="navbar-sticky" style={navbar}>
-                    <div class="mr-auto">
-                        <form class="form-inline pl-2" style={navItems}>
-                            <Link class="nav-link" to="/"><img class="nav-item" src={Logo} alt=":)" style={logoStyle}/></Link>
-                            <Link class="nav-link" to="/"><h2 class="pl-5" style={navText}>Home</h2></Link>
-                            <Link class="nav-link" to="/About Me"><h2 class="pl-5" style={navText}>About Me</h2></Link>
-                            <Link class="nav-link" to="/Projects"><h2 class="pl-5" style={navText}>Projects</h2></Link>
-                            <a class="nav-link" href="#"><h2 class="pl-5" style={navText}>Blog</h2></a>
-                        </form>
-                    </div>
-                </nav>
             </div>
         )
     }
