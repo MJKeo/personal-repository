@@ -32,7 +32,6 @@ export default class App extends React.Component {
       this.setState(prevState => ({
         page: num
       }))
-      console.log('I was triggered during componentDidMount')
     }
 
     render() {
@@ -82,9 +81,9 @@ export default class App extends React.Component {
       width: '1vw'
     }
     const navText = {
-      fontSize: '4vh',
+      fontSize: '3vh',
       color: '#1D97C2',
-      paddingLeft: '3vw'
+      paddingLeft: '2.5vw'
     }
     const navItems = {
         paddingTop: '1vh'
