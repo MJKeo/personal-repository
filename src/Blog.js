@@ -71,10 +71,10 @@ class Blog extends Component {
                 <div style={spacer}></div>
                 <div style={overlay}>
                         <div class="container-fluid text-center">
-                            <h1>Blog Page</h1>
-                            <h1>Blog Page</h1>
-                            <h1>Blog Page</h1>
-                            <h1>Blog Page</h1>
+                            <h1>B</h1>
+                            <h1>L</h1>
+                            <h1>O</h1>
+                            <h1>G</h1>
                             <h1>Blog Page</h1>
                             <h1>Blog Page</h1>
                             <h1>Blog Page</h1>

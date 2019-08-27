@@ -3,7 +3,8 @@ import './App.css';
 import Banner from './images/banner2.jpg';
 import BGParticles from './BGParticles';
 import Background from './images/bg2.png';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {BrowserRouter as Router, Link} from 'react-router-dom';
+import Logo from './images/logo.jpg';
 import Route from 'react-router-dom/Route';
 import Home from './Home';
 import Projects from './Projects'
@@ -16,7 +17,8 @@ export default class App extends React.Component {
 
     this.toggle = this.toggle.bind(this);
     this.state = {
-        isOpen: false
+        isOpen: false,
+        page: 0
       };
     }
     
@@ -25,6 +27,14 @@ export default class App extends React.Component {
         isOpen: !this.state.isOpen
       });
     }
+
+    updateState(num) {
+      this.setState(prevState => ({
+        page: num
+      }))
+      console.log('I was triggered during componentDidMount')
+    }
+
     render() {
       const mainDiv = {
         minHeight: '100vh',
@@ -34,36 +44,97 @@ export default class App extends React.Component {
         backgroundRepeat: 'no-repeat',
         backgroundSize: '100% 100%'
       }
+      const centerElement = {
+        position: 'absolute',
+        width: '100%',
+        top: '45%',
+        left: '0%',
+        transform: 'translate(0, -40%)',
+      }
+      const translucent = {
+        opacity: '0.8'
+      }
+      const optionStyle = {
+        position: 'relative',
+        fontSize: '7vh',
+        color: 'white',
+        margin: '5px',
+        opacity: '0.75'
+      }
+      const logoStyle = {
+        borderRadius: '50%',
+        width: '30vh'
+      }
+      const navbar = {
+        position: 'fixed',
+        background: 'white',
+        height: '10vh',
+        width: '100vw',
+        left: '0px',
+        top: '0px'
+    }
+    const logoStyle2 = {
+      borderRadius: '50%',
+      width: '7vh'
+    }
+    const navText = {
+      fontSize: '4vh',
+      color: '#1D97C2'
+    }
+    const navItems = {
+        paddingTop: '1vh'
+    }
+
+      let page;
+      let navigation;
+
+      if (this.state.page == 0) {
+        navigation = (<div>
+                <div style={centerElement}>
+                  <img class="nav-item" src={Logo} alt=":)" style={logoStyle}/>
+                  <h1 class="display-1 font-weight-bolder" style={translucent}>Welcome to My Personal Website!</h1>
+                  <div>
+                      <button type="button" class="btn" style={optionStyle} onClick={() => this.updateState(1)}>About Me</button>
+                      <button type="button" class="btn" style={optionStyle} onClick={() => this.updateState(2)}>Projects</button>
+                      <button type="button" class="btn" style={optionStyle} onClick={() => this.updateState(3)}>Blog</button>
+                  </div>
+                </div>
+        </div>   )
+      } else if (this.state.page > 0) {
+        navigation = (<nav class="navbar-sticky" style={navbar}>
+                        <div class="mr-auto">
+                          <form class="form-inline pl-2" style={navItems}>
+                              <img class="nav-item" class="pl-1" src={Logo} alt=":)" style={logoStyle2}/>
+                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(0)}>Home</button>
+                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(1)}>About Me</button>
+                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(2)}>Projects</button>
+                              <button type="button" class="pl-5 btn font-weight-bold" style={navText} onClick={() => this.updateState(3)}>Blog</button>
+                          </form>
+                        </div>
+                      </nav>)
+      }
+
+      if (this.state.page == 0) {
+        page = (<div></div>)
+      } else if (this.state.page == 1) {
+        page = <AboutMe />
+      } else if (this.state.page == 2) {
+        page = <Projects />
+      } else if (this.state.page == 3) {
+        page = <Blog />
+      }
       return (
-        // <Router>
-        //   <div style={mainDiv}>
-        //     <div style={bannerStyle}>
-        //       <nav class="navbar sticky-top navbar-expand-lg navbar-light" style={navbar}>
-        //           <h4 class="pl-3 pr-1 float-right display-4 text-white-50 font-weight-bold">Michael Keohane</h4>
-        //                   <ul class="navbar-nav mr-auto">
-        //                           <form class="form-inline my-2 my-lg-0 p-2">
-        //                                   <h2 class="pl-5 text-white-50"></h2>
-        //                                   <Link class="nav-link" to="/"><h2 class="pl-5 text-white-50">Home</h2></Link>
-        //                                   <Link class="nav-link" to="/projects"><h2 class="pl-5 text-white-50">My Projects</h2></Link>
-        //                                   <a class="nav-link" href="#"><h2 class="pl-5 text-white-50">Weekly Blog</h2></a>
-        //                           </form>
-        //                   </ul>
-        //           </nav>
-        //           <div style={spacer}></div>
-        //           <Route path="/" exact component={Home} />
-        //           <Route path="/Projects" exact component={Projects} />
-        //       </div>
-        //     </div>
-        //   </Router>
 
         <div style={mainDiv}>
           <div>
           <Router>
             <BGParticles />
-            <Route path="/" exact component={Home} />
+            {navigation}
+            {page}
+            {/* <Route path="/" exact component={Home} />
             <Route path="/Projects" exact component={Projects} />
             <Route path="/AboutMe" exact component={AboutMe} />
-            <Route path="/Blog" exact component={Blog} />
+            <Route path="/Blog" exact component={Blog} /> */}
           </Router>
           </div>
         </div>
