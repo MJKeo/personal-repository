@@ -16,13 +16,71 @@ class Home extends Component {
         });
       }
     render() {
+        const white = {
+            background: 'red',
+            height: '100%'
+        }
+        const child = {
+            background: 'green',
+            position: 'absolute',
+            paddingTop: '10%',
+            textAlign: 'center'
+        }
         return (
-            <div>
+            <div style={white}>
+                <div class="container-fluid text-center" style={child}>
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                        <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
                 <div class="container text-center">
                     <h1>Home Page</h1>
                 </div>
                 <div class="container text-center">
                         <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
+                </div>
+                <div class="container text-center">
+                    <h1>Home Page</h1>
                 </div>
             </div>
         )

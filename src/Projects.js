@@ -1,4 +1,5 @@
 import React, {Component } from 'react';
+import Banner from './images/banner5.png';
 
 class Projects extends Component {
     constructor(props) {
@@ -16,8 +17,12 @@ class Projects extends Component {
         });
       }
     render() {
+        const white = {
+            backgroundImage: "url(" + Banner + ")",
+            height: '100vh'
+        }
         return (
-            <div class="container text-center">
+            <div class="container-fluid text-center" style={white}>
                 <h1>Projects Page</h1>
             </div>
         )
