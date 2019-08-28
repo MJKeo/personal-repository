@@ -45,10 +45,9 @@ export default class App extends React.Component {
       }
       const centerElement = {
         position: 'absolute',
-        width: '100%',
         top: '45%',
-        left: '0%',
-        transform: 'translate(0, -40%)',
+        left: '45%',
+        transform: 'translate(-40%, -40%)',
       }
       const welcomeText = {
         opacity: '0.8',
@@ -68,20 +67,19 @@ export default class App extends React.Component {
       const navbar = {
         position: 'fixed',
         background: 'white',
-        height: '10vh',
         width: '100vw',
         left: '0px',
         top: '0px'
     }
     const smallLogo = {
       borderRadius: '50%',
-      width: '7vh'
+      width: '5.5vh',
     }
     const navSpacer = {
       width: '1vw'
     }
     const navText = {
-      fontSize: '3vh',
+      fontSize: '4vh',
       color: '#1D97C2',
       paddingLeft: '2.5vw'
     }
@@ -95,7 +93,7 @@ export default class App extends React.Component {
       if (this.state.page == 0) {
         navigation = (<div>
                 <div style={centerElement}>
-                  <img class="nav-item" src={Logo} alt=":)" style={logoStyle}/>
+                <img class="nav-item" src={Logo} alt=":)" style={logoStyle}/>
                   <h1 class="display-1 font-weight-bolder" style={welcomeText}>Welcome to My Personal Website!</h1>
                   <div>
                       <button type="button" class="btn" style={optionStyle} onClick={() => this.updateState(1)}>About Me</button>
@@ -109,7 +107,7 @@ export default class App extends React.Component {
                         <div class="mr-auto">
                           <form class="form-inline pl-2" style={navItems}>
                               <h1 style={navSpacer}></h1>
-                              <img class="nav-item" src={Logo} alt=":)" style={smallLogo}/>
+                              <img class="nav-item" src={Logo} alt=":)" style={smallLogo} onClick={() => this.updateState(0)}/>
                               <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(0)}>Home</button>
                               <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(1)}>About Me</button>
                               <button type="button" class="btn font-weight-bold" style={navText} onClick={() => this.updateState(2)}>Projects</button>
