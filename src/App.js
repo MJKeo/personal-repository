@@ -51,11 +51,11 @@ export default class App extends React.Component {
       }
       const welcomeText = {
         opacity: '0.8',
-        fontSize: '10vh'
+        fontSize: '8vh'
       }
       const optionStyle = {
         position: 'relative',
-        fontSize: '7vh',
+        fontSize: '6vh',
         color: 'white',
         margin: '5px',
         opacity: '0.75'
