@@ -90,9 +90,9 @@ class Blog extends Component {
                         <div class="text-center">
                             <ul style={centerly}>
                                 <li>
-                                  <Link to="/"><button type="button" class="btn font-weight-bold" style={navText}>Home</button></Link>
-                                  <Link to="/"><img class="nav-item" src={Logo} alt=":)" style={smallLogo}/></Link>
-                                  <Link to="/AboutMe"><button type="button" class="btn font-weight-bold" style={navText}>About Me</button></Link>
+                                  <Link to="/personal-website/"><button type="button" class="btn font-weight-bold" style={navText}>Home</button></Link>
+                                  <Link to="/personal-website/"><img class="nav-item" src={Logo} alt=":)" style={smallLogo}/></Link>
+                                  <Link to="/personal-website/AboutMe"><button type="button" class="btn font-weight-bold" style={navText}>About Me</button></Link>
                                 </li>
                             </ul>
                         </div>

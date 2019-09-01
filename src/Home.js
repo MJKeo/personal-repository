@@ -63,8 +63,8 @@ class Home extends Component {
                 <img class="nav-item img-thumbnail shadow-lg" src={Logo} alt=":)" style={logoStyle}/>
                   <h1 class="display-1 font-weight-bolder" style={welcomeText}>Welcome to My Personal Website!</h1>
                   <div>
-                      <Link to="/AboutMe"><button ref="option1" type="button" class="static-option-style btn" onMouseOver={() => this.checkInterval()}>About Me</button></Link>
-                      <Link to="/Blog"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Blog</button></Link>
+                      <Link to="/personal-website/AboutMe"><button ref="option1" type="button" class="static-option-style btn" onMouseOver={() => this.checkInterval()}>About Me</button></Link>
+                      <Link to="/personal-website/Blog"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Blog</button></Link>
                   </div>
                 </div>
         </div> 
