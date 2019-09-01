@@ -40,9 +40,9 @@ export default class App extends React.Component {
           <div>
           <Router>
             <BGParticles />
-            <Route path="/" exact component={Home} />
-            <Route path="/AboutMe" exact component={AboutMe} />
-            <Route path="/Blog" exact component={Blog} />
+            <Route path="/personal-website/" exact component={Home} />
+            <Route path="/personal-website/AboutMe" exact component={AboutMe} />
+            <Route path="/personal-website/Blog" exact component={Blog} />
           </Router>
           </div>
         </div>

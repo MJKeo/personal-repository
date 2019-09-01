@@ -18,13 +18,13 @@ body {
 
 .option-style {
     font-size: 6vh !important;
-    animation: shrink 0.2s;
+    animation: textshrink 0.2s;
     color: white!important;
     opacity: 0.75;
 }
 
 .option-style:hover {
-    animation: grow 0.2s;
+    animation: textgrow 0.2s;
     animation-fill-mode: forwards;  
     color: white!important;
     opacity: 0.75;
@@ -205,4 +205,14 @@ body {
 @keyframes vanish {
     from { opacity: 0.75 }
     to { opacity: 0 }
+}
+
+@keyframes textgrow {
+    from { font-size: 6vh;}
+    to { font-size: 7vh; }
+}
+
+@keyframes textshrink {
+    from { font-size: 7vh; }
+    to { font-size: 6vh; }
 }
