@@ -1,0 +1,208 @@
+body {
+    background: 'red';
+}
+
+.buttonstyle {
+    color: red;
+}
+
+.buttonstyle:hover {
+    color: blue;
+}
+
+.static-option-style {
+    font-size: 6vh !important;
+    color: white!important;
+    opacity: 0.75;
+}
+
+.option-style {
+    font-size: 6vh !important;
+    animation: shrink 0.2s;
+    color: white!important;
+    opacity: 0.75;
+}
+
+.option-style:hover {
+    animation: grow 0.2s;
+    animation-fill-mode: forwards;  
+    color: white!important;
+    opacity: 0.75;
+}
+
+.fade {
+    animation: fadein 1s;
+    animation-fill-mode: forwards;
+    border-radius: 50%;
+    width: 30vh;
+}
+
+.disappear {
+    animation: vanish 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.icon {
+    border-radius: 50%;
+    width: 30vh;
+    height: 30vh;
+    border-style: solid;
+    background: white;
+    font-size: 5vh;
+}
+
+.for-move {
+    padding-left: 10vh;
+    padding-top: 10vh;
+}
+
+.to-move-projects {
+    position: absolute;
+    animation: moveP 1s;
+    animation-fill-mode: forwards;
+}
+
+.move-back-projects {
+    position: absolute;
+    animation: moveBackP 1s;
+    animation-fill-mode: forwards;
+}
+
+.to-move-overview {
+    position: absolute;
+    animation: moveO 1s;
+    animation-fill-mode: forwards;
+}
+
+.fade-back {
+    animation: fadein 2s;
+    animation-fill-mode: forwards;
+}
+
+.icon:hover {
+    border-radius: 50%;
+    animation: icongrow 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.icon-text {
+    padding-top: 12vh;
+    padding-bottom: 12vh;
+    border-style: solid;
+}
+
+.icon-text:hover {
+    border-style: solid;
+    animation: icontextgrow 0.2s;
+    animation-fill-mode: forwards;
+}
+
+.option {
+    border-radius: 50%;
+    opacity: 0.75;
+    width: 25vh;
+}
+
+.small-option {
+    border-radius: 50%;
+    opacity: 0.75;
+    width: 10vh;
+}
+
+.padding {
+    position: absolute;
+    left: 25vw;
+    top: 25vh;
+}
+.padding2 {
+    position: absolute;
+    left: 60vw;
+    top: 25vh;
+}
+
+.resize {
+    border-radius: 50%;
+    opacity: 0.85;
+    animation: shrink 2s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveP {
+    from {
+        left: 25vw;
+        top: 25vh;
+        opacity: 1;
+        width: 25vh;
+    }
+    to {
+        left: 3vw;
+        top: 3vh;
+        opacity: 0;
+        width: 10vh;
+    }
+}
+
+@keyframes moveBackP {
+    from {
+        left: 3vw;
+        top: 3vh;
+        opacity: 1;
+        width: 10vh;
+    }
+    to {
+        left: 25vw;
+        top: 25vh;
+        opacity: 0;
+        width: 25vh;
+    }
+}
+
+@keyframes moveO {
+    from {
+        left: 60vw;
+        top: 25vh;
+        opacity: 1;
+        width: 25vh;
+    }
+    to {
+        left: 3vw;
+        top: 3vh;
+        opacity: 0;
+        width: 10vh;
+    }
+}
+
+@keyframes fadein {
+    from { opacity: 0 }
+    to { opacity: 0.75 }
+}
+
+@keyframes grow {
+    from { width: 10vh;
+        height: 10vh; }
+    to { width: 12vh;
+        height: 12vh; }
+}
+
+@keyframes icongrow {
+    from { width: 30vh;
+        height: 30vh;
+        font-size: 5vh;}
+    to { width: 32vh;
+        height: 32vh;
+        font-size: 10vh;} 
+}
+
+@keyframes icontextgrow {
+    from { padding-top: 12vh;
+        padding-bottom: 12vh;
+        font-size: 5vh;}
+    to { padding-top: 12vh;
+        padding-bottom: 13vh;
+        font-size: 6vh;} 
+}
+
+@keyframes vanish {
+    from { opacity: 0.75 }
+    to { opacity: 0 }
+}
