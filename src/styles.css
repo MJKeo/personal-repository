@@ -37,6 +37,11 @@ body {
     width: 30vh;
 }
 
+.fade-out {
+    animation: fadeout 1s;
+    animation-fill-mode: forwards;
+}
+
 .disappear {
     animation: vanish 0.2s;
     animation-fill-mode: forwards;
@@ -74,6 +79,24 @@ body {
     animation-fill-mode: forwards;
 }
 
+.move-back-overview {
+    position: absolute;
+    animation: moveBackO 1s;
+    animation-fill-mode: forwards;
+}
+
+.to-move-experience {
+    position: absolute;
+    animation: moveE 1s;
+    animation-fill-mode: forwards;
+}
+
+.move-back-experience {
+    position: absolute;
+    animation: moveBackE 1s;
+    animation-fill-mode: forwards;
+}
+
 .fade-back {
     animation: fadein 2s;
     animation-fill-mode: forwards;
@@ -104,20 +127,26 @@ body {
 }
 
 .small-option {
+    position: absolute;
     border-radius: 50%;
-    opacity: 0.75;
+    opacity: 0.6;
     width: 10vh;
 }
 
 .padding {
     position: absolute;
     left: 25vw;
-    top: 25vh;
+    top: 20vh;
 }
 .padding2 {
     position: absolute;
     left: 60vw;
-    top: 25vh;
+    top: 20vh;
+}
+.padding3 {
+    position: absolute;
+    left: 43vw;
+    top: 55vh;
 }
 
 .resize {
@@ -127,10 +156,45 @@ body {
     animation-fill-mode: forwards;
 }
 
-@keyframes moveP {
+.gone {
+    display: none;
+    height: 1px;
+}
+
+@keyframes moveO {
     from {
         left: 25vw;
-        top: 25vh;
+        top: 20vh;
+        opacity: 1;
+        width: 25vh;
+    }
+    to {
+        left: 3vw;
+        top: 3vh;
+        opacity: 0;
+        width: 10vh;
+    }
+}
+
+@keyframes moveBackO {
+    from {
+        left: 3vw;
+        top: 3vh;
+        opacity: 1;
+        width: 10vh;
+    }
+    to {
+        left: 25vw;
+        top: 20vh;
+        opacity: 0;
+        width: 25vh;
+    }
+}
+
+@keyframes moveP {
+    from {
+        left: 60vw;
+        top: 20vh;
         opacity: 1;
         width: 25vh;
     }
@@ -150,17 +214,17 @@ body {
         width: 10vh;
     }
     to {
-        left: 25vw;
-        top: 25vh;
+        left: 60vw;
+        top: 20vh;
         opacity: 0;
         width: 25vh;
     }
 }
 
-@keyframes moveO {
+@keyframes moveE {
     from {
-        left: 60vw;
-        top: 25vh;
+        left: 43vw;
+        top: 55vh;
         opacity: 1;
         width: 25vh;
     }
@@ -172,9 +236,29 @@ body {
     }
 }
 
+@keyframes moveBackE {
+    from {
+        left: 3vw;
+        top: 3vh;
+        opacity: 1;
+        width: 10vh;
+    }
+    to {
+        left: 43vw;
+        top: 55vh;
+        opacity: 0;
+        width: 25vh;
+    }
+}
+
 @keyframes fadein {
     from { opacity: 0 }
     to { opacity: 0.75 }
+}
+
+@keyframes fadeout {
+    from { opacity: 0.75 }
+    to { opacity: 0 }
 }
 
 @keyframes grow {

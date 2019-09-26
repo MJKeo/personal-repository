@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
-import Logo from './images/logo.jpg';
 
-class Blog extends Component {
+class GeneralOverview extends Component {
     constructor(props) {
         super(props);
     
@@ -50,7 +48,7 @@ class Blog extends Component {
           }
       
           const spacer = {
-              height: '16vh'
+              height: '10vh'
           }
           const smallSpacer = {
             height: '6vh'
@@ -59,25 +57,16 @@ class Blog extends Component {
             <div>
                 <div style={spacer}></div>
                 <div class="shadow-lg img-thumbnail" style={overlay}>
-                        <div class="text-center">
-                        <h1 class="display-2">This page is a work in progress and will be finished soon</h1>
+                        <div class="container">
+                            <h1 class="display-2 text-black text-center"><u>About Me</u></h1>
+                            <h4 class="text-left">My name is Michael Keohane, a 2nd year Computer Science major at the Georgia Institute of Technology, with concentrations in Intelligence and Media.</h4>
+                            <h1 class="display-2">This page is a work in progress and will be finished soon</h1>
                         </div>
                     </div>
-                    <div style={smallSpacer}></div>
-                    <nav class="navbar-sticky" style={navbar}>
-                        <div class="text-center">
-                            <ul style={centerly}>
-                                <li>
-                                  <Link to="/"><button type="button" class="btn font-weight-bold" style={navText}>Home</button></Link>
-                                  <Link to="/"><img class="nav-item" src={Logo} alt=":)" style={smallLogo}/></Link>
-                                  <Link to="/AboutMe/"><button type="button" class="btn font-weight-bold" style={navText}>About Me</button></Link>
-                                </li>
-                            </ul>
-                        </div>
-                      </nav>
+                    <div style={spacer}></div>
             </div>
         )
     }
 }
 
-export default Blog;
+export default GeneralOverview;

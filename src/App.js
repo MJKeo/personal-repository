@@ -2,7 +2,7 @@ import React from 'react';
 import './App.css';
 import BGParticles from './BGParticles';
 import Background from './images/bg2.png';
-import {BrowserRouter as Router} from 'react-router-dom';
+import {HashRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Home from './Home';
 import AboutMe from './AboutMe'
@@ -40,9 +40,9 @@ export default class App extends React.Component {
           <div>
           <Router>
             <BGParticles />
-            <Route path="/personal-website/" exact component={Home} />
-            <Route path="/personal-website/AboutMe" exact component={AboutMe} />
-            <Route path="/personal-website/Blog" exact component={Blog} />
+            <Route path="/" exact component={Home} />
+            <Route path="/AboutMe/" exact component={AboutMe} />
+            <Route path="/Blog/" exact component={Blog} />
           </Router>
           </div>
         </div>

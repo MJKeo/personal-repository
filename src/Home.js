@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './images/logo.jpg';
+import GitHub from './images/github.svg';
+import Linkedin from './images/linkedin.png';
 import './styles.css';
 
 class Home extends Component {
@@ -54,6 +56,12 @@ class Home extends Component {
             borderRadius: '50%',
             width: '30vh'
           }
+          const icon = {
+            width: '4vh',
+            marginRight: '0.7vw',
+            marginLeft: '0.7vw'
+          }
+
         const welcomeSpacer = {
           width: '5vw'
         }
@@ -63,8 +71,12 @@ class Home extends Component {
                 <img class="nav-item img-thumbnail shadow-lg" src={Logo} alt=":)" style={logoStyle}/>
                   <h1 class="display-1 font-weight-bolder" style={welcomeText}>Welcome to My Personal Website!</h1>
                   <div>
-                      <Link to="/personal-website/AboutMe"><button ref="option1" type="button" class="static-option-style btn" onMouseOver={() => this.checkInterval()}>About Me</button></Link>
-                      <Link to="/personal-website/Blog"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Blog</button></Link>
+                      <Link to="/AboutMe/"><button ref="option1" type="button" class="static-option-style btn" onMouseOver={() => this.checkInterval()}>About Me</button></Link>
+                      <Link to="/Blog/"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Blog</button></Link>
+                  </div>
+                  <div>
+                    <a href="https://github.com/MJKeo"><img src={GitHub} alt="none" style={icon}/></a>                
+                    <a href="https://linkedin.com/in/michael-keohane"><img src={Linkedin} alt="none" style={icon}/></a>
                   </div>
                 </div>
         </div> 
