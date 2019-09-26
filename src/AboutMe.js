@@ -338,7 +338,7 @@ class AboutMe extends Component {
                     <img ref="overviewOption" src={OverviewIcon} alt="overview" class="option padding" onClick={() => this.moveGeneralOverview()}></img>
                     <img ref="experienceOption" src={ExperienceIcon} alt="experience" class="option padding3" onClick={() => this.moveExperience()}></img>
                     <div ref="home">
-                        <Link to="/" style={noDeco}><h1 class="text-white-50" style={homeButton}>Home</h1></Link>
+                        <Link to="/" style={noDeco}><h2 class="text-white-50" style={homeButton}>Home</h2></Link>
                     </div>
                 </div>
             </div>
