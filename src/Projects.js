@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Project from './Project.js';
 
 class Projects extends Component {
     constructor(props) {
@@ -53,6 +54,11 @@ class Projects extends Component {
           const smallSpacer = {
             height: '6vh'
         }
+
+        var arr = ["one", "two", "three"];
+
+        //var f = arr.map(ar => <Project thing={ar} />)
+
         return (
             <div>
                 <div style={spacer}></div>
@@ -61,6 +67,7 @@ class Projects extends Component {
                             <h1 class="display-2 text-black text-center"><u>Projects</u></h1>
                             <h1 class="display-2">This page is a work in progress and will be finished soon</h1>
                         </div>
+                        < Project title="title" description = "desc" link="link" />
                     </div>
                     <div style={spacer}></div>
             </div>

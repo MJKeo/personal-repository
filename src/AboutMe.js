@@ -190,6 +190,7 @@ class AboutMe extends Component {
       fadeBackBackProjects() {
         var object = this.refs.projectsOption;
         var home = this.refs.home;
+        var page = this.refs.pageDisplay;
         if (this.state.counter >= 11) {
             this.refs.overviewOption.classList.remove("disappear");
             this.refs.overviewOption.classList.add("fade-back");
@@ -199,6 +200,7 @@ class AboutMe extends Component {
             object.src=ProjectsIcon;
             object.classList.add("fade-back");
             object.classList.add("padding2");
+            page.classList.add("gone");
             home.classList.remove("gone");
             home.classList.add("fade-back");
             clearInterval(this.interval);
@@ -239,6 +241,7 @@ class AboutMe extends Component {
       fadeBackBackOverview() {
         var object = this.refs.overviewOption;
         var home = this.refs.home;
+        var page = this.refs.pageDisplay;
         if (this.state.counter >= 11) {
             this.refs.projectsOption.classList.remove("disappear");
             this.refs.projectsOption.classList.add("fade-back");
@@ -248,6 +251,7 @@ class AboutMe extends Component {
             object.src=OverviewIcon;
             object.classList.add("fade-back");
             object.classList.add("padding");
+            page.classList.add("gone");
             home.classList.remove("gone");
             home.classList.add("fade-back");
             clearInterval(this.interval);
@@ -288,6 +292,7 @@ class AboutMe extends Component {
       fadeBackBackExperience() {
         var object = this.refs.experienceOption;
         var home = this.refs.home;
+        var page = this.refs.pageDisplay;
         if (this.state.counter >= 11) {
             this.refs.projectsOption.classList.remove("disappear");
             this.refs.projectsOption.classList.add("fade-back");
@@ -296,7 +301,8 @@ class AboutMe extends Component {
             object.classList.remove("move-back-experience");
             object.src=ExperienceIcon;
             object.classList.add("fade-back");
-            object.classList.add("padding3")
+            object.classList.add("padding3");
+            page.classList.add("gone");
             home.classList.remove("gone");
             home.classList.add("fade-back");
             clearInterval(this.interval);
@@ -328,11 +334,13 @@ class AboutMe extends Component {
           const noDeco = {
             textDecoration: 'none'
           }
+
+          const page = {
+              marginRight: '5%',
+              width: '90%'
+          }
         return (
             <div>
-                <div ref="pageDisplay" class="container-fluid gone">
-                    {this.state.page}
-                </div>
                 <div style={overallDiv}>
                     <img ref="projectsOption" src={ProjectsIcon} alt="projects" class="option padding2" onClick={() => this.moveProjects()}></img>
                     <img ref="overviewOption" src={OverviewIcon} alt="overview" class="option padding" onClick={() => this.moveGeneralOverview()}></img>
@@ -340,6 +348,9 @@ class AboutMe extends Component {
                     <div ref="home">
                         <Link to="/" style={noDeco}><h2 class="text-white-50" style={homeButton}>Home</h2></Link>
                     </div>
+                </div>
+                <div ref="pageDisplay" class="container-fluid gone" style={page}>
+                    {this.state.page}
                 </div>
             </div>
         )
