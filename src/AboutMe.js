@@ -21,7 +21,8 @@ class AboutMe extends Component {
           counter: 0,
           haveSelected: false,
           selected: 0,
-          page: <GeneralOverview />
+          page: <GeneralOverview />,
+          interval: null
         };
 
         this.updateOpacity = this.updateOpacity.bind(this);
@@ -43,21 +44,29 @@ class AboutMe extends Component {
       }
 
       componentWillMount() {
-        //   setInterval(this.updateOpacity, 100)
+        this.setState({
+            interval: setInterval(this.updateOpacity, 100)
+          });
       }
 
       updateOpacity() {
-        //   this.setState(() => ({
-        //       counter: this.state.counter + 1
-        //   }));
-        //   if (this.state.counter == 10) {
-        //     this.setState(() => ({
-        //         counter: 0
-        //     }));
-        //     var object = this.refs.thing;
-        //     object.classList.remove("fade");
-        //     clearInterval(this.updateOpacity);
-        //   }
+          this.setState(() => ({
+              counter: this.state.counter + 1
+          }));
+          if (this.state.counter == 5) {
+            this.setState(() => ({
+                counter: 0
+            }));
+            var object1 = this.refs.projectsOption;
+            object1.classList.remove("fade");
+            var object2 = this.refs.overviewOption;
+            object2.classList.remove("fade");
+            var object3 = this.refs.experienceOption;
+            object3.classList.remove("fade");
+            var object4 = this.refs.home;
+            object4.classList.remove("fade");
+            clearInterval(this.state.interval);
+          }
       }
 
       moveProjects() {
@@ -342,10 +351,10 @@ class AboutMe extends Component {
         return (
             <div>
                 <div style={overallDiv}>
-                    <img ref="projectsOption" src={ProjectsIcon} alt="projects" class="option padding2" onClick={() => this.moveProjects()}></img>
-                    <img ref="overviewOption" src={OverviewIcon} alt="overview" class="option padding" onClick={() => this.moveGeneralOverview()}></img>
-                    <img ref="experienceOption" src={ExperienceIcon} alt="experience" class="option padding3" onClick={() => this.moveExperience()}></img>
-                    <div ref="home">
+                    <img ref="projectsOption" src={ProjectsIcon} alt="projects" class="fade option padding2" onClick={() => this.moveProjects()}></img>
+                    <img ref="overviewOption" src={OverviewIcon} alt="overview" class="fade option padding" onClick={() => this.moveGeneralOverview()}></img>
+                    <img ref="experienceOption" src={ExperienceIcon} alt="experience" class="fade option padding3" onClick={() => this.moveExperience()}></img>
+                    <div ref="home" class="fade">
                         <Link to="/" style={noDeco}><h2 class="text-white-50" style={homeButton}>Home</h2></Link>
                     </div>
                 </div>
