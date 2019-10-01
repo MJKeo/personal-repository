@@ -44,7 +44,20 @@ class Project extends Component {
             height: '1vh'
         }
         const indent = {
-            textIndent: '2vw'
+            textIndent: '2vw',
+            fontSize: '1.5vw'
+        }
+        const subTitle = {
+            fontSize: '3.8vw'
+          }
+        const dateText = {
+            fontSize: '1.8vw'
+        }
+        const text = {
+            fontSize: '1.1vw'
+        }
+        const smallText = {
+            fontSize: '1vw'
         }
 
         var description = this.props.description.map(paragraph => (<div><h4 style={indent}>{paragraph}</h4><div style={smallSpacer} /></div>))
@@ -52,20 +65,20 @@ class Project extends Component {
         var display = null
         if(this.state.clicked) {
             display = (<div>
-                            <h3><i>{this.props.time}</i></h3>
+                            <h3 style={dateText}><i>{this.props.time}</i></h3>
                             <div style={smallSpacer} />
                             <div style={smallSpacer} />
                             {description}
                             <div style={smallSpacer} />
                             <div class="container-fluid mx-auto text-center">{images}</div>
                             <div style={smallSpacer} />
-                            <h5>Check it out: </h5>
-                            <a href={this.props.link}>{this.props.link}</a>
+                            <h5 style={text}>Check it out: </h5>
+                            <a style={smallText} href={this.props.link}>{this.props.link}</a>
                         </div>)
         }
         return (
             <div style = {mainDiv}>
-                <h1 class="display-4 text-left font-weight-bold" onClick={() => this.update()}>{this.props.title}</h1>
+                <h1 class="text-left font-weight-bold" style={subTitle} onClick={() => this.update()}>{this.props.title}</h1>
                 <div class="container">
                     {display}
                 </div>

@@ -99,13 +99,20 @@ class Projects extends Component {
 
         var toRender = overall.map(element => (<Project title={element[0]} time={element[1]} description={element[2]} link={element[3]} image={element[4]} />))
 
+        const titleText = {
+          fontSize: '5vw'
+        }
+        const text = {
+          fontSize: '1.5vw'
+        }
+
         return (
             <div>
                 <div style={spacer}></div>
                 <div class="shadow-lg img-thumbnail" style={overlay}>
                         <div class="text-center">
-                            <h1 class="display-2 text-black text-center"><u>Projects</u></h1>
-                            <h3>Click on any of the titles below to learn more about each project</h3>
+                            <h1 class="text-black text-center" style={titleText}><u>Projects</u></h1>
+                            <h3 style={text}>Here are some projects I have been working on. Click on any of the titles below to learn more about each project.</h3>
                         </div>
                         <div style={spacer} />
                         {toRender}

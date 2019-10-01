@@ -333,11 +333,9 @@ class AboutMe extends Component {
             top: '0px',
             textAlign: 'left'
           }
-          const abs = {
-              position: 'absolute'
-          }
           const homeButton = {
-              marginLeft: '0.5vw'
+              marginLeft: '0.5vw',
+              fontSize: '2vw'
           }
 
           const noDeco = {
