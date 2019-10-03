@@ -21,7 +21,7 @@ class GeneralOverview extends Component {
             position: 'relative',
             background: 'white',
             width: '80%',
-            opacity: '0.8',
+            opacity: '0.9',
             left: '10%',
             boxShadow: '1px'
           }

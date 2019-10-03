@@ -2,9 +2,9 @@ import React, {Component } from 'react';
 import ProjectsIcon from './images/projects.png';
 import OverviewIcon from "./images/overview.png";
 import BackIcon from "./images/back.png";
-import ExperienceIcon from "./images/experience.png";
+import ExperienceIcon from "./images/experience2.png";
 import GeneralOverview from "./GeneralOverview";
-import Experience from "./Experience";
+import Experiences from "./Experiences";
 import Projects from "./Projects";
 import { objectTypeSpreadProperty, optionalCallExpression } from '@babel/types';
 import { Link } from 'react-router-dom';
@@ -145,7 +145,7 @@ class AboutMe extends Component {
         if (this.state.selected == 0) {
             this.setState(() => ({
                 selected: 3,
-                page: <Experience />
+                page: <Experiences />
             }));
             object.classList.remove("fade-back");
             this.refs.overviewOption.classList.remove("fade-back");
@@ -333,10 +333,6 @@ class AboutMe extends Component {
             top: '0px',
             textAlign: 'left'
           }
-          const homeButton = {
-              marginLeft: '0.5vw',
-              fontSize: '2vw'
-          }
 
           const noDeco = {
             textDecoration: 'none'
@@ -353,7 +349,7 @@ class AboutMe extends Component {
                     <img ref="overviewOption" src={OverviewIcon} alt="overview" class="fade option padding" onClick={() => this.moveGeneralOverview()}></img>
                     <img ref="experienceOption" src={ExperienceIcon} alt="experience" class="fade option padding3" onClick={() => this.moveExperience()}></img>
                     <div ref="home" class="fade">
-                        <Link to="/" style={noDeco}><h2 class="text-white-50" style={homeButton}>Home</h2></Link>
+                        <Link to="/" style={noDeco}><h2 class="text-white-50 home">Home</h2></Link>
                     </div>
                 </div>
                 <div ref="pageDisplay" class="container-fluid gone" style={page}>

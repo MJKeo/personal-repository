@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './styles.css';
 
 class Experience extends Component {
     constructor(props) {
@@ -24,45 +25,39 @@ class Experience extends Component {
             left: '10%',
             boxShadow: '1px'
           }
-          const navbar = {
-            position: 'fixed',
-            background: 'white',
-            width: '100%',
-            left: '0px',
-            top: '0px'
-        }
-          const smallLogo = {
-            borderRadius: '50%',
-            width: '5.5vh',
-          }
-          const navText = {
-            fontSize: '4vh',
-            color: '#1D97C2',
-            paddingLeft: '4vw',
-            paddingRight: '4vw'
-          }
-          const centerly = {
-            margin: '0',
-            float: 'none',
-            listStyleType: 'none'
-          }
-      
           const spacer = {
-              height: '10vh'
+              height: '25%'
           }
-          const smallSpacer = {
-            height: '6vh'
+          const box = {
+              border: 'solid',
+              height: '20vh',
+              width: '100%'
+          }
+          const darkBox = {
+            border: 'solid',
+            height: '20vh',
+            width: '100%',
+            background: 'black',
+            border: 'black'
         }
+
+          var toRender = null
+          if(this.props.num == this.props.selected) {
+            toRender = (<div class="container-fluid text-white" style={darkBox}>
+                <div style={spacer} />
+                <h1>{this.props.title}</h1>
+            </div>)
+          } else {
+            toRender = (<div class="container-fluid text-black experience-option" style={box}>
+                <div style={spacer} />
+                <h1>{this.props.title}</h1>
+            </div>)
+          }
+          
+
         return (
             <div>
-                <div style={spacer}></div>
-                <div class="shadow-lg img-thumbnail" style={overlay}>
-                        <div class="text-center">
-                            <h1 class="display-2 text-black text-center"><u>Experience</u></h1>
-                            <h1 class="display-2">This page is a work in progress and will be finished soon</h1>
-                        </div>
-                    </div>
-                    <div style={spacer}></div>
+                {toRender}
             </div>
         )
     }

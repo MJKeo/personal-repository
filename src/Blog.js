@@ -24,7 +24,8 @@ class Blog extends Component {
             width: '80%',
             opacity: '0.8',
             left: '10%',
-            boxShadow: '1px'
+            boxShadow: '1px',
+            height: '80vh'
           }
           const navbar = {
             position: 'fixed',
@@ -52,15 +53,19 @@ class Blog extends Component {
           const spacer = {
               height: '16vh'
           }
+          const halfway = {
+            height: '35vh'
+          }
           const smallSpacer = {
             height: '6vh'
-        }
+          }
         return (
             <div>
                 <div style={spacer}></div>
                 <div class="shadow-lg img-thumbnail" style={overlay}>
-                        <div class="text-center">
-                        <h1 class="display-2">This page is a work in progress and will be finished soon</h1>
+                        <div class="container text-center">
+                        <div style={halfway} />
+                        <h1>Uh oh, looks like I haven't made my first post yet. I'll begin posting here Sunday October 6th so be sure to check back here then!</h1>
                         </div>
                     </div>
                     <div style={smallSpacer}></div>

@@ -10,6 +10,15 @@ body {
     color: blue;
 }
 
+.home {
+    margin-left: 0.5vw;
+    font-size: 2vw;
+    transition: 0.1s;
+}
+.home:hover {
+    font-size: 2.2vw;
+}
+
 .static-option-style {
     font-size: 6vh !important;
     color: white!important;
@@ -38,7 +47,7 @@ body {
 }
 
 .fade-out {
-    animation: fadeout 1s;
+    animation: fadeout 0.7s;
     animation-fill-mode: forwards;
 }
 
@@ -69,42 +78,42 @@ body {
 
 .to-move-projects {
     position: absolute;
-    animation: moveP 1s;
+    animation: moveP 0.7s;
     animation-fill-mode: forwards;
 }
 
 .move-back-projects {
     position: absolute;
-    animation: moveBackP 1s;
+    animation: moveBackP 0.7s;
     animation-fill-mode: forwards;
 }
 
 .to-move-overview {
     position: absolute;
-    animation: moveO 1s;
+    animation: moveO 0.7s;
     animation-fill-mode: forwards;
 }
 
 .move-back-overview {
     position: absolute;
-    animation: moveBackO 1s;
+    animation: moveBackO 0.7s;
     animation-fill-mode: forwards;
 }
 
 .to-move-experience {
     position: absolute;
-    animation: moveE 1s;
+    animation: moveE 0.7s;
     animation-fill-mode: forwards;
 }
 
 .move-back-experience {
     position: absolute;
-    animation: moveBackE 1s;
+    animation: moveBackE 0.7s;
     animation-fill-mode: forwards;
 }
 
 .fade-back {
-    animation: fadein 2s;
+    animation: fadein 1.5s;
     animation-fill-mode: forwards;
 }
 
@@ -130,6 +139,12 @@ body {
     border-radius: 50%;
     opacity: 0.75;
     width: 30vh;
+    cursor: pointer;
+    transition: 0.2s
+}
+
+.option:hover {
+    width: 32vh
 }
 
 .small-option {
@@ -137,22 +152,41 @@ body {
     border-radius: 50%;
     opacity: 0.6;
     width: 10vh;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.small-option:hover {
+    width: 10.5vh;
 }
 
 .padding {
     position: absolute;
     left: 20vw;
     top: 20vh;
+    transition: 0.3s;
+}
+.padding:hover {
+    left: 19.5vw;
+    top: 19vh;
 }
 .padding2 {
     position: absolute;
     left: 65vw;
     top: 20vh;
 }
+.padding2:hover {
+    left: 64.5vw;
+    top: 19vh;
+}
 .padding3 {
     position: absolute;
     left: 43vw;
     top: 55vh;
+}
+.padding3:hover {
+    left: 42.5vw;
+    top: 54vh;
 }
 
 .resize {
@@ -160,6 +194,19 @@ body {
     opacity: 0.85;
     animation: shrink 2s;
     animation-fill-mode: forwards;
+}
+
+.experience-option {
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.experience-option:hover {
+    background: #D4D0E1;
+}
+
+.project-title:hover {
+    cursor: pointer;
 }
 
 .gone {

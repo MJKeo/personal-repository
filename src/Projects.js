@@ -36,7 +36,7 @@ class Projects extends Component {
             position: 'relative',
             background: 'white',
             width: '80%',
-            opacity: '0.8',
+            opacity: '0.9',
             left: '10%',
             boxShadow: '1px'
           }
@@ -110,7 +110,7 @@ class Projects extends Component {
             <div>
                 <div style={spacer}></div>
                 <div class="shadow-lg img-thumbnail" style={overlay}>
-                        <div class="text-center">
+                        <div class="container text-center">
                             <h1 class="text-black text-center" style={titleText}><u>Projects</u></h1>
                             <h3 style={text}>Here are some projects I have been working on. Click on any of the titles below to learn more about each project.</h3>
                         </div>

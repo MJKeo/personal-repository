@@ -78,7 +78,7 @@ class Project extends Component {
         }
         return (
             <div style = {mainDiv}>
-                <h1 class="text-left font-weight-bold" style={subTitle} onClick={() => this.update()}>{this.props.title}</h1>
+                <h1 class="text-left font-weight-bold project-title" style={subTitle} onClick={() => this.update()}>{this.props.title}</h1>
                 <div class="container">
                     {display}
                 </div>
