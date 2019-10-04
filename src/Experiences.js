@@ -139,19 +139,19 @@ class Experiences extends Component {
                             <div class="col">
                               <div class="row">
                                 <div class="col">
-                                  <h1>iOS Club</h1>
+                                  <h1 style={subheading}>iOS Club</h1>
                                   <h1 style={text}>{clubDescriptions[0]}</h1>
                                   <div style={smallSpacer} />
                                 </div>
                               </div>
                               <div class="row">
                                 <div class="col">
-                                  <h1>BME Robotics</h1>
+                                  <h1 style={subheading}>BME Robotics</h1>
                                   <h1 style={text}>{clubDescriptions[1]}</h1>
                                 </div>
                               </div>
                             </div>
-                            <div class="col"><h1>Freshman Council</h1>
+                            <div class="col"><h1 style={subheading}>Freshman Council</h1>
                               <h1 style={text}>{clubDescriptions[2]}</h1>
                               <div style={paragraphSpacer} />
                               <h1 style={text}>{clubDescriptions[3]}</h1>
