@@ -54,10 +54,13 @@ class Blog extends Component {
               height: '16vh'
           }
           const halfway = {
-            height: '35vh'
+            height: '18vw'
           }
           const smallSpacer = {
             height: '6vh'
+          }
+          const text = {
+            fontSize: '3vw'
           }
         return (
             <div>
@@ -65,7 +68,7 @@ class Blog extends Component {
                 <div class="shadow-lg img-thumbnail" style={overlay}>
                         <div class="container text-center">
                         <div style={halfway} />
-                        <h1>Uh oh, looks like I haven't made my first post yet. I'll begin posting here Sunday October 6th so be sure to check back here then!</h1>
+                        <h1 style={text}>Uh oh, looks like I haven't made my first post yet. I'll begin posting here Sunday October 6th so be sure to check back here then!</h1>
                         </div>
                     </div>
                     <div style={smallSpacer}></div>
