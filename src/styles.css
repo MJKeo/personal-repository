@@ -14,6 +14,7 @@ body {
     margin-left: 0.5vw;
     font-size: 2vw;
     transition: 0.1s;
+    width: 5vw;
 }
 .home:hover {
     font-size: 2.2vw;
@@ -138,26 +139,26 @@ body {
 .option {
     border-radius: 50%;
     opacity: 0.75;
-    width: 30vh;
+    width: 16vw;
     cursor: pointer;
     transition: 0.2s
 }
 
 .option:hover {
-    width: 32vh
+    width: 17.5vw
 }
 
 .small-option {
     position: absolute;
     border-radius: 50%;
     opacity: 0.6;
-    width: 10vh;
+    width: 7.5vw;
     cursor: pointer;
     transition: 0.3s;
 }
 
 .small-option:hover {
-    width: 10.5vh;
+    width: 8.5vw;
 }
 
 .padding {
@@ -219,13 +220,13 @@ body {
         left: 20vw;
         top: 20vh;
         opacity: 1;
-        width: 30vh;
+        width: 16vw;
     }
     to {
         left: 3vw;
         top: 3vh;
         opacity: 0;
-        width: 10vh;
+        width: 7.5vw;
     }
 }
 
@@ -234,13 +235,13 @@ body {
         left: 3vw;
         top: 3vh;
         opacity: 1;
-        width: 10vh;
+        width: 7.5vw;
     }
     to {
         left: 20vw;
         top: 20vh;
         opacity: 0;
-        width: 30vh;
+        width: 16vw;
     }
 }
 
@@ -249,13 +250,13 @@ body {
         left: 65vw;
         top: 20vh;
         opacity: 1;
-        width: 30vh;
+        width: 16vw;
     }
     to {
         left: 3vw;
         top: 3vh;
         opacity: 0;
-        width: 10vh;
+        width: 7.5vw;
     }
 }
 
@@ -264,13 +265,13 @@ body {
         left: 3vw;
         top: 3vh;
         opacity: 1;
-        width: 10vh;
+        width: 7.5vw;
     }
     to {
         left: 65vw;
         top: 20vh;
         opacity: 0;
-        width: 30vh;
+        width: 16vw;
     }
 }
 
@@ -279,13 +280,13 @@ body {
         left: 43vw;
         top: 55vh;
         opacity: 1;
-        width: 30vh;
+        width: 16vw;
     }
     to {
         left: 3vw;
         top: 3vh;
         opacity: 0;
-        width: 10vh;
+        width: 7.5vw;
     }
 }
 
@@ -294,13 +295,13 @@ body {
         left: 3vw;
         top: 3vh;
         opacity: 1;
-        width: 10vh;
+        width: 7.5vw;
     }
     to {
         left: 43vw;
         top: 55vh;
         opacity: 0;
-        width: 30vh;
+        width: 16vw;
     }
 }
 

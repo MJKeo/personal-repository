@@ -335,12 +335,16 @@ class AboutMe extends Component {
           }
 
           const noDeco = {
-            textDecoration: 'none'
+            textDecoration: 'none',
+            width: '5vw'
+          }
+          const border = {
+            border: 'solid'
           }
 
           const page = {
-              marginRight: '5%',
-              width: '90%'
+              marginRight: '10vw',
+              width: '80vw'
           }
         return (
             <div>
