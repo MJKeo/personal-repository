@@ -17,40 +17,35 @@ class Experience extends Component {
         });
       }
     render() {
-          const overlay = {
-            position: 'relative',
-            background: 'white',
-            width: '80%',
-            opacity: '0.8',
-            left: '10%',
-            boxShadow: '1px'
-          }
           const spacer = {
-              height: '25%'
+              height: '1.4vw'
           }
           const box = {
               border: 'solid',
-              height: '20vh',
+              height: '10vw',
               width: '100%'
           }
           const darkBox = {
             border: 'solid',
-            height: '20vh',
+            height: '10vw',
             width: '100%',
             background: 'black',
             border: 'black'
-        }
+          }
+          const titleText = {
+            fontSize: '2.4vw'
+          }
 
           var toRender = null
           if(this.props.num == this.props.selected) {
             toRender = (<div class="container-fluid text-white" style={darkBox}>
                 <div style={spacer} />
-                <h1>{this.props.title}</h1>
+                <h1 style={titleText}>{this.props.title}</h1>
             </div>)
           } else {
             toRender = (<div class="container-fluid text-black experience-option" style={box}>
                 <div style={spacer} />
-                <h1>{this.props.title}</h1>
+                <h1 style={titleText}>{this.props.title}</h1>
             </div>)
           }
           

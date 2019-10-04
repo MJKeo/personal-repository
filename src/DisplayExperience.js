@@ -17,7 +17,7 @@ class DisplayExperience extends Component {
       }
     render() {       
         const mainDiv = {
-            height: '50vh'
+            height: '30vw'
         }
 
         const titleText = {
@@ -41,10 +41,10 @@ class DisplayExperience extends Component {
 
 
         return (
-            <div class="container" style={mainDiv}>
-                <h1 style={titleText}>{this.props.title}</h1>
-                <h1 style={timeText}><i>{this.props.time}</i></h1>
-                {paragraphs}
+            <div class="container align-items-center" style={mainDiv}>
+                    <h1 style={titleText}>{this.props.title}</h1>
+                    <h1 style={timeText}><i>{this.props.time}</i></h1>
+                    {paragraphs}
             </div>
         )
     }

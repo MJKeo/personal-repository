@@ -37,53 +37,41 @@ class Experiences extends Component {
             left: '10%',
             boxShadow: '1px'
           }
-          const navbar = {
-            position: 'fixed',
-            background: 'white',
-            width: '100%',
-            left: '0px',
-            top: '0px'
-        }
-          const smallLogo = {
-            borderRadius: '50%',
-            width: '5.5vh',
-          }
-          const navText = {
-            fontSize: '4vh',
-            color: '#1D97C2',
-            paddingLeft: '4vw',
-            paddingRight: '4vw'
-          }
-          const centerly = {
-            margin: '0',
-            float: 'none',
-            listStyleType: 'none'
-          }
-      
+
           const spacer = {
               height: '10vh'
           }
           const smallSpacer = {
             height: '4vh'
-        }
+          }
+          const paragraphSpacer = {
+            height: '2vh'
+          }
         
-        const titleText = {
-          fontSize: '5vw'
-        }
-        const coursesText = {
-          fontSize: '3vw'
-        }
-        const text = {
-          fontSize: '1.5vw'
-        }
-        const padding = { 
-          paddingLeft: '5vw',
-          paddingRight: '5vw'
-        }
-        const removePadding = {
-          paddingLeft: '0px',
-          paddingRight: '0px'
-        }
+          const titleText = {
+            fontSize: '5vw'
+          }
+          const courseText = {
+            fontSize: '1.8vw',
+            paddingBottom: '1vw'
+          }
+          const subheading = {
+            fontSize: '3vw'
+          }
+          const subText = {
+            fontSize: '1.5vw'
+          }
+          const text = {
+            fontSize: '1.3vw'
+          }
+          const padding = { 
+            paddingLeft: '5vw',
+            paddingRight: '5vw'
+          }
+          const removePadding = {
+            paddingLeft: '0px',
+            paddingRight: '0px'
+          }
 
         var titles = ["IT Intern: Digital Credit Union", "Parks and Recreation", "Tutor: Let's Get Ready", "Summer Intern: Cisco", "Student Liaison: SYFS", "Volunteer: Be Like Brit"]
 
@@ -96,7 +84,13 @@ class Experiences extends Component {
         descs.push(["Shrewsbury Youth and Family Services (SYFS) is a nonprofit located in my home town that focuses on providing social services to low income households. For my Junior and Senior years of high school I served as a student liaison, participating in weekly meetings, keeping the board updated on the activities going on at my school, and volunteering to help run fundraisers and community events, such as the annual toy drive. By being a part of the organization I was able to see firsthand how board members planned events, managed funds, and brainstormed ideas to improve the quality of the services they provide. I met so many amazing people during my time with SYFS and I am so glad they let me join."])
         descs.push(["I spent a week in Grand Goâve, Haiti, helping out in Brit’s Home, associated with the organization Be Like Brit. During this week I, along with other volunteers, worked to build a home from scratch for a local family in need. We cleared the land, dug holes for the main support beams, even mixed the concrete we then poured to make the foundation. After a few days, an entire home had been constructed, ready for the family to move in. Along with this, Brit’s Home serves as an orphanage, and the volunteers and I spent time with the kids during evenings and nights throughout the week. It was a life-changing experience, a combination of extreme culture shock from seeing the harsh living conditions for the local people, as well as the love and selflessness shared by everyone at Brit’s Home."])
 
-        var courses = ["Intro to AI | Computer Organization & Programs | Linear Algebra | Multivariable Calculus | Data Structures and Algorithms | Objects and Design"]
+        var courses = ["Intro to AI", "Computer Organization & Programs", "Linear Algebra", "Multivariable Calculus", "Data Structures and Algorithms",  "Objects and Design"]
+
+        var clubDescriptions = []
+        clubDescriptions.push("Every week we would meet to learn how to create increasingly complex iOS applications using XCode. Some of these applications include a pindropping app and a chatroom app, and with each project we expanded what we were capable of creating, learning new tools and tricks along the way.")
+        clubDescriptions.push("Learned Arduino and basic circuitry to build a robot that could pick up a vile, move forward with the vile, then place it in a bin. In my team my job was to write the arduino code that would make the robot function, although I did also get to go into the workshop a bit and help build the wooden frame.")
+        clubDescriptions.push("I am a Sophomore Advisor for Freshman Council. This organization focuses on providing a welcoming and empowering environment for 30 first-year students each year, as well as hosting small events throughout the year that help boost campus morale.")
+        clubDescriptions.push("Some of my responsibilities include handling the recruitment and selection of council members as well as organizing retreats, meetings, events, and volunteer opportunities. Since we are going through the process of changing our sponsoring organization, I am partaking in meetings and communicating with organizations throughout campus to set up a successful next year.")
 
         var toRender = null
         if (this.state.selected != -1){
@@ -109,7 +103,7 @@ class Experiences extends Component {
                 <div class="shadow-lg img-thumbnail" style={overlay}>
                         <div class="container text-center">
                             <h1 class="text-black text-center"style={titleText}><u>Experience</u></h1>
-                            <h3 style={text}>Click on any of the boxes below to learn more about some of my experiences</h3>
+                            <h3 style={subText}>Click on any of the boxes below to learn more about some of my experiences</h3>
                         </div>
                         <div style={smallSpacer} />
                         {toRender}
@@ -138,10 +132,62 @@ class Experiences extends Component {
                           </div>
                         </div>
                         <div style={spacer}></div>
+                        <h1 style={subheading}><u>Clubs and Organizations</u></h1>
+                        <div style={smallSpacer} />
                         <div class="container">
-                          <h1 class="text-black text-center"style={coursesText}><u>Relevant Courses</u></h1>
-                          <h3 style={text}>{courses}</h3>
+                          <div class="row">
+                            <div class="col">
+                              <div class="row">
+                                <div class="col">
+                                  <h1>iOS Club</h1>
+                                  <h1 style={text}>{clubDescriptions[0]}</h1>
+                                  <div style={smallSpacer} />
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="col">
+                                  <h1>BME Robotics</h1>
+                                  <h1 style={text}>{clubDescriptions[1]}</h1>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col"><h1>Freshman Council</h1>
+                              <h1 style={text}>{clubDescriptions[2]}</h1>
+                              <div style={paragraphSpacer} />
+                              <h1 style={text}>{clubDescriptions[3]}</h1>
+                            </div>
+                          </div>
                         </div>
+                        
+                        
+                        <div style={spacer}></div>
+                        <div class="container">
+                          <h1 class="text-black text-center"style={subheading}><u>Relevant Courses</u></h1>
+                          <div style={smallSpacer} />
+                          <div class="row">
+                            <div class="col">
+                              <h1 style={courseText}>{courses[0]}</h1>
+                            </div>
+                            <div class="col">
+                              <h1 style={courseText}>{courses[1]}</h1>
+                            </div>
+                            <div class="col">
+                              <h1 style={courseText}>{courses[2]}</h1>
+                            </div>
+                          </div>
+                          <div class="row">
+                            <div class="col">
+                              <h1 style={courseText}>{courses[3]}</h1>
+                            </div>
+                            <div class="col">
+                              <h1 style={courseText}>{courses[4]}</h1>
+                            </div>
+                            <div class="col">
+                              <h1 style={courseText}>{courses[5]}</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <div style={smallSpacer} />
                         <div style={smallSpacer} />
                     </div>
                     <div style={spacer}></div>
