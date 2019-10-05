@@ -18,7 +18,7 @@ class Experience extends Component {
       }
     render() {
           const spacer = {
-              height: '1.4vw'
+              height: '30%'
           }
           const box = {
               border: 'solid',
@@ -33,7 +33,7 @@ class Experience extends Component {
             border: 'black'
           }
           const titleText = {
-            fontSize: '2.4vw'
+            fontSize: '2vw'
           }
 
           var toRender = null
