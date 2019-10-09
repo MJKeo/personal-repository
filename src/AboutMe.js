@@ -8,6 +8,7 @@ import Experiences from "./Experiences";
 import Projects from "./Projects";
 import { objectTypeSpreadProperty, optionalCallExpression } from '@babel/types';
 import { Link } from 'react-router-dom';
+import BGParticles from './BGParticles';
 
 
 
@@ -348,6 +349,7 @@ class AboutMe extends Component {
           }
         return (
             <div>
+          <BGParticles />
                 <div style={overallDiv}>
                     <img ref="projectsOption" src={ProjectsIcon} alt="projects" class="fade option padding2" onClick={() => this.moveProjects()}></img>
                     <img ref="overviewOption" src={OverviewIcon} alt="overview" class="fade option padding" onClick={() => this.moveGeneralOverview()}></img>

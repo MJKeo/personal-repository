@@ -1,0 +1,104 @@
+.item {
+    font-size: 4vh !important;
+    color: #1D97C2 !important;
+    width: 30vw;
+    padding-left: 4vw !important;
+    padding-right: 4vw !important;
+    transition: 0.1s;
+}
+
+.item:hover {
+    color: #5BBEE1 !important;
+}
+
+.shadow {
+    box-shadow: 10px 10px 5px grey;
+}
+
+.main-box {
+    min-height: 100vh;
+    width: 90%;
+    background: white;
+}
+
+.title-box {
+    width: 70%;
+    min-height: 15vh;
+    padding-bottom: 40px;
+}
+
+.title {
+    font-size: 5vw;
+}
+
+.sans-serif {
+    font-family: sans-serif;
+}
+
+.search-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: 100%;
+    height: 30px;
+    padding-left: 3vw;
+    padding-top: 10px;
+}
+
+.spy-icon {
+    width: 50px;
+    height: 40px;
+    padding-right: 10px;
+}
+
+.search-bar {
+    width: 15vw !important;
+    height: 10px;
+}
+
+.display-title {
+    color: #243C93;
+    font-size: 3.5vw;
+}
+
+.display-title:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.page-title {
+    font-size: 4.5vw;
+    padding-top: 20px;
+}
+
+/* Here are my styles for making the blog posts */
+
+/* colors */
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.green {
+    color: green;
+}
+
+.blue {
+    color: blue;
+}
+
+/* alignment */
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.center {
+    text-align: center;
+}

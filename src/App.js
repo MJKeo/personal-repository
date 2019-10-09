@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css';
-import BGParticles from './BGParticles';
 import Background from './images/bg2.png';
 import {HashRouter as Router} from 'react-router-dom';
 import Route from 'react-router-dom/Route';
 import Home from './Home';
 import AboutMe from './AboutMe'
 import Blog from './Blog'
+import BlogPage from './BlogPage'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -39,10 +39,10 @@ export default class App extends React.Component {
         <div style={mainDiv}>
           <div>
           <Router>
-            <BGParticles />
             <Route path="/" exact component={Home} />
             <Route path="/AboutMe/" exact component={AboutMe} />
             <Route path="/Blog/" exact component={Blog} />
+            <Route path="/read-post" exact component={BlogPage} />
           </Router>
           </div>
         </div>

@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import Logo from './images/logo.jpg';
 import GitHub from './images/github.svg';
 import Linkedin from './images/linkedin.png';
+import BGParticles from './BGParticles';
 import './styles.css';
 
 class Home extends Component {
@@ -67,6 +68,7 @@ class Home extends Component {
         }
         return (
           <div>
+          <BGParticles />
                 <div style={centerElement}>
                 <img class="nav-item img-thumbnail shadow-lg" src={Logo} alt=":)" style={logoStyle}/>
                   <h1 class="display-1 font-weight-bolder" style={welcomeText}>Welcome to My Personal Website!</h1>

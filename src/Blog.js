@@ -1,14 +1,20 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import Logo from './images/logo.jpg';
+import './blog.css'
+import SpyGlass from './images/spyGlass.png';
+import db from './config.js';
+import BlogDisplay from './BlogDisplay.js';
 
 class Blog extends Component {
     constructor(props) {
         super(props);
     
         this.toggle = this.toggle.bind(this);
+        this.pushData = this.pushData.bind(this);
         this.state = {
-          isOpen: false
+          isOpen: false,
+          data: []
         };
       }
       
@@ -17,16 +23,24 @@ class Blog extends Component {
           isOpen: !this.state.isOpen
         });
       }
+
+      componentWillMount() {
+        const that = this;
+        db.ref('Data/value').once('value').then(function(snapshot) {
+          that.setState(() => ({
+            data: snapshot.val()
+          }))
+        });
+      }
+
+      pushData() {
+        var arr = [["Title1", "Date1", "Overview1", "Content1"], ["Title2", "Date2", "Overview2", "Content2"], ["Title3", "Date3", "Overview3", "Content3"]]
+        db.ref("Test").update({
+          thing: arr
+        })
+      }
+
     render() {
-          const overlay = {
-            position: 'relative',
-            background: 'white',
-            width: '80%',
-            opacity: '0.8',
-            left: '10%',
-            boxShadow: '1px',
-            height: '80vh'
-          }
           const navbar = {
             position: 'fixed',
             background: 'white',
@@ -38,47 +52,59 @@ class Blog extends Component {
             borderRadius: '50%',
             width: '5.5vh',
           }
-          const navText = {
-            fontSize: '4vh',
-            color: '#1D97C2',
-            paddingLeft: '4vw',
-            paddingRight: '4vw'
-          }
           const centerly = {
             margin: '0',
             float: 'none',
             listStyleType: 'none'
           }
+          const line = {
+            width: '20vw',
+            marginLeft: '40px',
+            height: '0.5px',
+            backgroundColor: 'gray'
+          }
+          const border = {
+            border: 'solid'
+          }
       
           const spacer = {
-              height: '16vh'
+              height: '10vh',
           }
-          const halfway = {
-            height: '18vw'
+          const lineSpacer = {
+            height: '15px'
           }
-          const smallSpacer = {
-            height: '6vh'
-          }
-          const text = {
-            fontSize: '3vw'
-          }
+          console.log(this.state.data)
+
+          var posts = null;
+          posts = this.state.data.map((element, i) => (
+            <BlogDisplay key={i} title={element[0]} date={element[1]} overview={element[2]} content={element[3]} />
+          ))
         return (
             <div>
-                <div style={spacer}></div>
-                <div class="shadow-lg img-thumbnail" style={overlay}>
-                        <div class="container text-center">
-                        <div style={halfway} />
-                        <h1 style={text}>Uh oh, looks like I haven't made my first post yet. I'll begin posting here Sunday October 6th so be sure to check back here then!</h1>
-                        </div>
-                    </div>
-                    <div style={smallSpacer}></div>
-                    <nav class="navbar-sticky" style={navbar}>
+                <div class="mx-auto main-box">
+                  <div style={spacer}></div>
+                  <div class="title-box mx-auto">
+                    <h1 class="title sans-serif">Welcome to My Blog!</h1>
+                    <h3>This is where I post my (hopefully) weekly blog going over what's happened in the past week, click any of the posts below to check them out.</h3>
+                  </div>
+                  <div class="search-box">
+                      <img src={SpyGlass} class="spy-icon" />
+                      <input class="form-control search-bar" type="text" placeholder="Search" aria-label="Search" />
+                  </div>
+                  <div style={lineSpacer} />
+                  <hr style={line}/>
+                  <div>
+                    {posts}
+                    <div style={spacer} />
+                  </div>
+                </div>
+                    <nav class="navbar-sticky shadow" style={navbar}>
                         <div class="text-center">
                             <ul style={centerly}>
                                 <li>
-                                  <Link to="/"><button type="button" class="btn font-weight-bold" style={navText}>Home</button></Link>
+                                  <Link to="/"><button type="button" class="btn item font-weight-bold">Home</button></Link>
                                   <Link to="/"><img class="nav-item" src={Logo} alt=":)" style={smallLogo}/></Link>
-                                  <Link to="/AboutMe/"><button type="button" class="btn font-weight-bold" style={navText}>About Me</button></Link>
+                                  <Link to="/AboutMe/"><button type="button" class="btn item font-weight-bold">About Me</button></Link>
                                 </li>
                             </ul>
                         </div>

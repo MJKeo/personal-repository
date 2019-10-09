@@ -5,6 +5,7 @@
   "homepage": "http://mjkeo.github.io/personal-website",
   "dependencies": {
     "bootstrap": "^4.3.1",
+    "firebase": "^7.1.0",
     "particles.js": "^2.0.0",
     "react": "^16.9.0",
     "react-bootstrap": "^1.0.0-beta.12",
