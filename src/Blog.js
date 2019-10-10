@@ -58,21 +58,7 @@ class Blog extends Component {
           const smallLogo = {
             borderRadius: '50%',
             border: 'white',
-            width: '3.5vw',
-          }
-          const centerly = {
-            margin: '0',
-            float: 'none',
-            listStyleType: 'none'
-          }
-          const line = {
-            width: '20vw',
-            marginLeft: '40px',
-            height: '0.5px',
-            backgroundColor: 'gray'
-          }
-          const border = {
-            border: 'solid'
+            width: '3.9vw',
           }
       
           const spacer = {
@@ -143,13 +129,11 @@ class Blog extends Component {
                 </div>
                     <nav class="navbar-sticky shadow" style={navbar}>
                         <div class="text-center">
-                            <ul style={centerly}>
-                                <li>
+                            <div class="flex-row flex-center">
                                   <Link to="/"><button type="button" class="btn item font-weight-bold">Home</button></Link>
-                                  <Link to="/"><img class="nav-item img-thumbnail" src={Logo} alt=":)" style={smallLogo}/></Link>
+                                  <Link to="/"><img class="item img-thumbnail" src={Logo} alt=":)" style={smallLogo}/></Link>
                                   <Link to="/AboutMe/"><button type="button" class="btn item font-weight-bold">About Me</button></Link>
-                                </li>
-                            </ul>
+                            </div>
                         </div>
                       </nav>
             </div>

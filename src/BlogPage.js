@@ -102,15 +102,13 @@ class BlogDisplay extends Component {
                 <div ref="content"></div>
 
                 <nav class="navbar-sticky shadow" style={navbar}>
-                    <div class="text-center">
-                        <ul style={centerly}>
-                            <li>
-                            <Link to="/"><button type="button" class="btn item font-weight-bold">Home</button></Link>
-                            <Link to="/"><img class="nav-item img-thumbnail" src={Logo} alt=":)" style={smallLogo}/></Link>
-                            <Link to="/AboutMe/"><button type="button" class="btn item font-weight-bold">About Me</button></Link>
-                            </li>
-                        </ul>
-                    </div>
+                        <div class="text-center">
+                            <div class="flex-row flex-center">
+                                  <Link to="/"><button type="button" class="btn item font-weight-bold">Home</button></Link>
+                                  <Link to="/"><img class="item img-thumbnail" src={Logo} alt=":)" style={smallLogo}/></Link>
+                                  <Link to="/AboutMe/"><button type="button" class="btn item font-weight-bold">About Me</button></Link>
+                            </div>
+                        </div>
                 </nav>
             </div>
         </div>

@@ -53,7 +53,7 @@ class BlogDisplay extends Component {
         <div class="card" style={mainDiv}>
             <div style={cardTop}></div>
             <div style={indent}>
-                <div class="flex-row">
+                <div class="flex-row space-bet">
                     <Link to="/read-post" ><h1 class="display-title font" onClick={this.pushData}><b>{this.props.title}</b></h1></Link>
                     <h3 class="date font" style={dateStyle}>{"Posted on: " + this.props.date}</h3>
                 </div>
