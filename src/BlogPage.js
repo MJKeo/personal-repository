@@ -66,6 +66,7 @@ class BlogDisplay extends Component {
       }
       const dateStyle = {
           fontSize: '2vw',
+          fontFamily: 'Times New Roman, serif'
       }
       const spacer = {
           height: '5.5vw'
@@ -82,11 +83,6 @@ class BlogDisplay extends Component {
             border: 'white',
             width: '3.5vw',
         }
-        const centerly = {
-            margin: '0',
-            float: 'none',
-            listStyleType: 'none'
-          }
 
       var toRender = (<div>
             <h1 class="display-5 page-title">{this.state.data[0]}</h1>

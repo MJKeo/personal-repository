@@ -112,7 +112,7 @@ class Blog extends Component {
                       <div class="recent-posts text-left">
                         <div style={smallSpacer} />
                         <div style={smallSpacer} />
-                        <h2>Recent Posts</h2>
+                        <h2 class="subheading">Recent Posts</h2>
                         <hr class="shorten"/>
                           {this.state.data.map((element, i) => {
                             if (i < 4 && i != this.state.data.length - 1) {
