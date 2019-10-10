@@ -79,3 +79,7 @@
 .text {
     color: red;
 }
+
+.small-input {
+    width: 50%;
+}

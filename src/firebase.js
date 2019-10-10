@@ -42,7 +42,7 @@ async function pushData() {
     
     if (tempArr[0] != null) {
         currentList = tempArr[0]
-        currentList.push(arr)
+        currentList.unshift(arr)
         console.log("has items")
     } else {
         currentList = [arr]

@@ -1,14 +1,14 @@
 .item {
-    font-size: 4vh !important;
-    color: #1D97C2 !important;
-    width: 30vw;
-    padding-left: 4vw !important;
-    padding-right: 4vw !important;
-    transition: 0.1s;
+    font-size: 2.3vw !important;
+    color: #DEE4F8 !important;
+    width: 15vw;
+    margin-left: 3vw !important;
+    margin-right: 3vw !important;
+    transition: 0.1s !important;
 }
 
 .item:hover {
-    color: #5BBEE1 !important;
+    text-shadow: 0px 0px 2px white !important;
 }
 
 .shadow {
@@ -22,27 +22,36 @@
 }
 
 .title-box {
-    width: 70%;
-    min-height: 15vh;
-    padding-bottom: 40px;
+    padding-bottom: 16px;
+    text-align: center;
 }
 
 .title {
-    font-size: 5vw;
+    font-size: 5.7vw;
 }
 
-.sans-serif {
-    font-family: sans-serif;
+.font {
+    font-family: Times New Roman, serif;
 }
 
 .search-box {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
+    width: 70%;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     width: 100%;
-    height: 30px;
-    padding-left: 3vw;
-    padding-top: 10px;
+}
+
+.date {
+    margin-right: 5px;
+    width: 25%;
+    text-align: center;
 }
 
 .spy-icon {
@@ -53,12 +62,12 @@
 
 .search-bar {
     width: 15vw !important;
-    height: 10px;
+    height: 20px;
 }
 
 .display-title {
-    color: #243C93;
-    font-size: 3.5vw;
+    color: #4B61B1;
+    font-size: 1.8vw;
 }
 
 .display-title:hover{
@@ -69,6 +78,53 @@
 .page-title {
     font-size: 4.5vw;
     padding-top: 20px;
+}
+
+.border {
+    border: solid;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.recent-posts {
+    margin-left: 2vw;
+}
+
+.recent-post {
+    color: black;
+    font-size: 1vw;
+    margin-left: 1vw;
+}
+
+.shorten {
+    width: 80%;
+    margin-left: 0;
+    height: 0.1px;
+    background: #E0E1E3;
+}
+
+.sub-title {
+    background: #354684;
+    color: white;
+    width: 30%;
+    border-radius: 25px;
+    margin-left: 35%;
+    padding: 0.5%;
+    font-size: 1.5vw;
+    font-weight: bold;
+    box-shadow: 0px 4px 6px 1px #E0E1E3;
+}
+
+.sub-heading {
+    font-size: 4.8vw;
+}
+
+.arrow {
+    position: absolute;
+    width: 3vw;
+    left: 6vw;
 }
 
 /* Here are my styles for making the blog posts */
@@ -87,7 +143,7 @@
 }
 
 .blue {
-    color: blue;
+    color: #425494;
 }
 
 /* alignment */
@@ -101,4 +157,34 @@
 
 .center {
     text-align: center;
+}
+
+.heading {
+    font-size: 3vw;
+}
+
+.subheading {
+    font-size: 2vw;
+}
+
+.text {
+    font-size: 1vw;
+}
+
+/* spacing */
+
+.spacer {
+    height: 2vw;
+}
+
+.small-spacer {
+    height: 0.5vw;
+}
+
+.indent {
+    text-indent: 1vw;
+}
+
+.medium-image {
+    width: 30vw;
 }

@@ -4,7 +4,8 @@ import Logo from './images/logo.jpg';
 import './blog.css'
 import SpyGlass from './images/spyGlass.png';
 import db from './config.js';
-import BlogDisplay from './BlogDisplay.js';
+import BlogDisplay from './BlogDisplay';
+import RecentPost from './RecentPost';
 
 class Blog extends Component {
     constructor(props) {
@@ -41,16 +42,23 @@ class Blog extends Component {
       }
 
     render() {
+
+        const mainDiv = {
+          width: '100%',
+          height: '100%',
+          background: 'radial-gradient(circle, #ffffff, #f0eff8, #e0e0f1, #E0E1E3, #E0E1E3)'
+        }
           const navbar = {
             position: 'fixed',
-            background: 'white',
+            background: 'radial-gradient(circle, #4057ab, #364b9b, #2d408b, #23357c, #182a6d)',
             width: '100%',
             left: '0px',
             top: '0px'
         }
           const smallLogo = {
             borderRadius: '50%',
-            width: '5.5vh',
+            border: 'white',
+            width: '3.5vw',
           }
           const centerly = {
             margin: '0',
@@ -68,34 +76,69 @@ class Blog extends Component {
           }
       
           const spacer = {
-              height: '10vh',
+              height: '5vw',
           }
-          const lineSpacer = {
-            height: '15px'
+          const smallSpacer = {
+            height: '0.5vw'
+          }
+          const postSpacer = {
+              height: '2vw'
+          }
+          const mainBreak = {
+            marginLeft: '10%',
+            marginRight: '10%'
           }
           console.log(this.state.data)
 
           var posts = null;
           posts = this.state.data.map((element, i) => (
-            <BlogDisplay key={i} title={element[0]} date={element[1]} overview={element[2]} content={element[3]} />
+            <div>
+              <BlogDisplay key={i} title={element[0]} date={element[1]} overview={element[2]} content={element[3]} />
+              <div style={postSpacer}></div>
+            </div>
           ))
         return (
-            <div>
+            <div style={mainDiv}>
                 <div class="mx-auto main-box">
                   <div style={spacer}></div>
-                  <div class="title-box mx-auto">
-                    <h1 class="title sans-serif">Welcome to My Blog!</h1>
-                    <h3>This is where I post my (hopefully) weekly blog going over what's happened in the past week, click any of the posts below to check them out.</h3>
+                  <div class="title-box">
+                    <h1 class="title font">Welcome to My Blog!</h1>
+                    <h3 class="font sub-title">Check back weekly for new posts!</h3>
                   </div>
-                  <div class="search-box">
-                      <img src={SpyGlass} class="spy-icon" />
-                      <input class="form-control search-bar" type="text" placeholder="Search" aria-label="Search" />
-                  </div>
-                  <div style={lineSpacer} />
-                  <hr style={line}/>
-                  <div>
-                    {posts}
-                    <div style={spacer} />
+                  <hr style={mainBreak}/>
+                  <div style={postSpacer} />
+                  <div style={postSpacer} />
+                  <div class="row">
+                    <div class="col">
+                      <h1 class="font sub-heading">Posts</h1>
+                      <div style={postSpacer} />
+                        <div>
+                          {posts}
+                          <div style={spacer} />
+                        </div>
+                      </div>
+                    <div class="col-4">
+                    <div style={postSpacer} />
+                      <div class="search-box">
+                        <img src={SpyGlass} class="spy-icon" />
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search" />
+                      </div>
+                      <div class="recent-posts text-left">
+                        <div style={smallSpacer} />
+                        <div style={smallSpacer} />
+                        <h2>Recent Posts</h2>
+                        <hr class="shorten"/>
+                          {this.state.data.map((element, i) => {
+                            if (i < 4 && i != this.state.data.length - 1) {
+                              return <RecentPost line={true} title={element[0]} date={element[1]} content={element[3]} />
+                            } else if (i <= 4) {
+                              return <RecentPost line={false} title={element[0]} date={element[1]} content={element[3]} />
+                            } else {
+                              return <h4></h4>
+                            }
+                          })}
+                      </div>
+                    </div>
                   </div>
                 </div>
                     <nav class="navbar-sticky shadow" style={navbar}>
@@ -103,7 +146,7 @@ class Blog extends Component {
                             <ul style={centerly}>
                                 <li>
                                   <Link to="/"><button type="button" class="btn item font-weight-bold">Home</button></Link>
-                                  <Link to="/"><img class="nav-item" src={Logo} alt=":)" style={smallLogo}/></Link>
+                                  <Link to="/"><img class="nav-item img-thumbnail" src={Logo} alt=":)" style={smallLogo}/></Link>
                                   <Link to="/AboutMe/"><button type="button" class="btn item font-weight-bold">About Me</button></Link>
                                 </li>
                             </ul>

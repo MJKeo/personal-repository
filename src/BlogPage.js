@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import Logo from './images/logo.jpg';
+import Arrow from './images/backArrow.png';
 import db from './config';
 import './blog.css'
 
@@ -48,6 +51,11 @@ class BlogDisplay extends Component {
         }
     }
   render() {
+    const bg = {
+        width: '100%',
+        height: '100%',
+        background: 'radial-gradient(circle, #ffffff, #f0eff8, #e0e0f1, #E0E1E3, #E0E1E3)'
+      }
       const mainDiv = {
           minHeight: '100vh',
           width: '90vw',
@@ -60,8 +68,25 @@ class BlogDisplay extends Component {
           fontSize: '2vw',
       }
       const spacer = {
-          height: '100px'
+          height: '5.5vw'
       }
+      const navbar = {
+        position: 'fixed',
+        background: 'radial-gradient(circle, #4057ab, #364b9b, #2d408b, #23357c, #182a6d)',
+        width: '100%',
+        left: '0px',
+        top: '0px'
+        }
+      const smallLogo = {
+            borderRadius: '50%',
+            border: 'white',
+            width: '3.5vw',
+        }
+        const centerly = {
+            margin: '0',
+            float: 'none',
+            listStyleType: 'none'
+          }
 
       var toRender = (<div>
             <h1 class="display-5 page-title">{this.state.data[0]}</h1>
@@ -69,9 +94,25 @@ class BlogDisplay extends Component {
             <div style={spacer} />
         </div>)
     return (
-        <div style={mainDiv}>
-            {toRender}
-            <div ref="content"></div>
+        <div style={bg}>
+            <div style={mainDiv}>
+                <div style={spacer} />
+                <Link to="/Blog/" ><img class="arrow" src={Arrow} alt="back" /></Link>
+                {toRender}
+                <div ref="content"></div>
+
+                <nav class="navbar-sticky shadow" style={navbar}>
+                    <div class="text-center">
+                        <ul style={centerly}>
+                            <li>
+                            <Link to="/"><button type="button" class="btn item font-weight-bold">Home</button></Link>
+                            <Link to="/"><img class="nav-item img-thumbnail" src={Logo} alt=":)" style={smallLogo}/></Link>
+                            <Link to="/AboutMe/"><button type="button" class="btn item font-weight-bold">About Me</button></Link>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
         </div>
     );
   }

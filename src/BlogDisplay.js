@@ -30,26 +30,35 @@ class BlogDisplay extends Component {
       const mainDiv = {
           textAlign: 'left',
           marginLeft: '5vw',
-          paddingTop: '50px'
+          marginRight: '5vw'
       }
       const dateStyle = {
           marginLeft: '2vw',
-          fontSize: '2.5vw'
+          fontSize: '1vw'
       }
       const overviewStyle = {
           marginLeft: '2vw',
-          fontSize: '1.3vw'
+          fontSize: '1.1vw'
       }
-      const underline = {
-          height: '0.5px',
-          background: 'gray'
+      const cardTop = {
+          height: '1vw',
+          width: '100%',
+          backgroundColor: '#20306D',
+          marginBottom: '2vw'
+      }
+      const indent = {
+          paddingLeft: '2vw'
       }
     return (
-        <div class="container" style={mainDiv}>
-            <Link to="/read-post" ><h1 class="display-5 display-title sans-serif" onClick={this.pushData}>{this.props.title}</h1></Link>
-            <h3 style={dateStyle}><i>{"Posted on: " + this.props.date}</i></h3>
-            <p style={overviewStyle}>{"Overview: " + this.props.overview}</p>
-            <hr style={underline}/>
+        <div class="card" style={mainDiv}>
+            <div style={cardTop}></div>
+            <div style={indent}>
+                <div class="flex-row">
+                    <Link to="/read-post" ><h1 class="display-title font" onClick={this.pushData}><b>{this.props.title}</b></h1></Link>
+                    <h3 class="date font" style={dateStyle}>{"Posted on: " + this.props.date}</h3>
+                </div>
+                <p class="font" style={overviewStyle}><i>{"Overview: " + this.props.overview}</i></p>
+            </div>
         </div>
     );
   }
