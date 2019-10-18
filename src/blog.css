@@ -197,6 +197,35 @@
     text-indent: 1vw;
 }
 
+.small-horizontal-spacer {
+    width: 2vw
+}
+
+/* images */
+
 .medium-image {
     width: 30vw;
+}
+
+.small-image {
+    width: 15vw;
+}
+
+/* flexing */
+.flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.center-flex {
+    justify-content: center;
+}
+
+.even-flex {
+    justify-content: space-evenly;
 }

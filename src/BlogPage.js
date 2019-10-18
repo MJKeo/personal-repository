@@ -53,7 +53,7 @@ class BlogDisplay extends Component {
   render() {
     const bg = {
         width: '100%',
-        height: '100%',
+        minHeight: '100vh',
         background: 'radial-gradient(circle, #ffffff, #f0eff8, #e0e0f1, #E0E1E3, #E0E1E3)'
       }
       const mainDiv = {
