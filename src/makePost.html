@@ -10,16 +10,30 @@
     <script src="https://www.gstatic.com/firebasejs/7.1.0/firebase-database.js"></script>
 
     <link rel="stylesheet" href="./make.css" />
+    <link rel="stylesheet" href="./blog.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   </head>
   <body>
-      <div class="main-div flex-center">
-          <div class="container main-box flex-even">
-            <div id="a"></div>
-            <input class="small-input" id="title" type="text" placeholder="Title">
-            <input class="small-input" id="overview" type="text" placeholder="Overview">
-            <textarea id="input" class="input" rows="100" cols="50"></textarea>
-            <button id="pushDataBtn" class="button-text btn btn-outline-dark gone" onclick="pushData()">Push Data To Firebase</button>
+      <div class="main-bg">
+          <div id="preview" class="preview gone">
+              <img class="arrow" src="./images/backArrow.png" onclick="showMaker()" alt="back" />
+              <div class="spacer"></div>
+              <h1 id="previewTitle" class="display-5 page-title">Title</h1>
+              <i><h3 id="date" class="date-make">Date</h3></i>
+              <div class="spacer"></div>
+              <div id="content"></div>
+          </div>
+          <div id="makeContent" class="main-div flex-center">
+              <div class="container main-box flex-even">
+                  <div id="a"></div>
+                  <input class="small-input" id="title" type="text" placeholder="Title">
+                  <input class="small-input" id="overview" type="text" placeholder="Overview">
+                  <textarea id="input" class="input" rows="100" cols="50"></textarea>
+                  <div class="buttonsDiv">
+                      <button id="pushDataBtn" class="button-text btn btn-outline-dark" onclick="pushData()">Push Data To Firebase</button>
+                      <button id="previewBtn" class="button-text btn btn-outline-dark" onclick="showPreview()">Preview</button>
+                  </div>
+                </div>
           </div>
       </div>
 

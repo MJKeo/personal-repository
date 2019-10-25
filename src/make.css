@@ -54,7 +54,7 @@
 }
 
 .gone {
-    display: none;
+    display: none !important;
 }
 
 .red-dot {
@@ -76,10 +76,40 @@
     height: 50%;
 }
 
-.text {
-    color: red;
-}
-
 .small-input {
     width: 50%;
+}
+
+.buttonsDiv {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 40%;
+}
+
+.make-content {
+    width: 100%;
+}
+
+.main-bg {
+    background: #20306D;
+    min-height: 100vh;
+    width: 100vw;
+}
+
+.preview {
+    text-align: left;
+    margin-left: 5vw;
+    margin-right: 5vw;
+    min-height: 100vh;
+    background: white;
+    width: 90vw;
+    padding-right: 2vw;
+    padding-left: 2vw;
+    text-align: center;
+}
+
+.date-make {
+    font-size: 2vw;
+    font-family: Times New Roman, serif;
 }

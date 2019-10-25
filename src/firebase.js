@@ -14,13 +14,44 @@ var config = {
 firebase.initializeApp(config);
 var db = firebase.database();
 
-async function pushData() {
-    const box = document.getElementById("input");
-    const titleb = document.getElementById("title");
-    const overviewb = document.getElementById("overview");
-    const monthNames = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+// variables
+const box = document.getElementById("input");
+const titleb = document.getElementById("title");
+const overviewb = document.getElementById("overview");
+const monthNames = ["January", "February", "March", "April", "May", "June",
+"July", "August", "September", "October", "November", "December"
 ];
+const preview = document.getElementById("preview");
+const make = document.getElementById("makeContent");
+const previewTitle = document.getElementById("previewTitle");
+const previewDate = document.getElementById("date");
+const content = document.getElementById("content");
+
+async function showPreview() {
+    preview.classList.remove("gone");
+    make.classList.add("gone");
+
+    var d = new Date();
+    var date = monthNames[d.getMonth()] + " " + d.getDate() + ", " + (d.getYear() + 1900)
+    var text = box.value;
+    var title = titleb.value;
+
+
+
+    console.log(title)
+
+    previewTitle.innerText = title;
+    previewDate.innerText = date;
+    content.innerHTML = text;
+
+}
+
+function showMaker() {
+    preview.classList.add("gone");
+    make.classList.remove("gone");
+}
+
+async function pushData() {
 
     var d = new Date();
     var date = monthNames[d.getMonth()] + " " + d.getDate() + ", " + (d.getYear() + 1900)

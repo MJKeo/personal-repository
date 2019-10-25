@@ -136,6 +136,10 @@
     left: 6vw;
 }
 
+.arrow:hover {
+    cursor: pointer;
+}
+
 /* Here are my styles for making the blog posts */
 
 /* colors */
