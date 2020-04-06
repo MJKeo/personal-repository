@@ -4,6 +4,8 @@ import Logo from './images/logo.jpg';
 import GitHub from './images/github.svg';
 import Linkedin from './images/linkedin.png';
 import BGParticles from './BGParticles';
+import Pdf from './myResume.pdf';
+import resumeIcon from './images/resumeIcon.png';
 import './styles.css';
 
 class Home extends Component {
@@ -62,6 +64,11 @@ class Home extends Component {
             marginRight: '0.7vw',
             marginLeft: '0.7vw'
           }
+          const rezIcon = {
+            width: '10vh',
+            marginRight: '0.7vw',
+            marginLeft: '0.7vw'
+          }
 
         const welcomeSpacer = {
           width: '5vw'
@@ -77,8 +84,9 @@ class Home extends Component {
                       <Link to="/Blog/"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Blog</button></Link>
                   </div>
                   <div>
-                    <a href="https://github.com/MJKeo"><img src={GitHub} alt="none" style={icon}/></a>                
-                    <a href="https://linkedin.com/in/michael-keohane"><img src={Linkedin} alt="none" style={icon}/></a>
+                    <a href="https://github.com/MJKeo"><img src={GitHub} alt="github" style={icon}/></a>     
+                    <a href = {Pdf} target = "_blank"><img src={resumeIcon} alt="resume" style={rezIcon}/></a>           
+                    <a href="https://linkedin.com/in/michael-keohane"><img src={Linkedin} alt="linkedin" style={icon}/></a>
                   </div>
                 </div>
         </div> 
