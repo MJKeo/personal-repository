@@ -70,6 +70,9 @@ class Home extends Component {
             marginRight: '0.7vw',
             marginLeft: '0.7vw'
           }
+          const gone = {
+            display: 'none'
+          }
 
         const welcomeSpacer = {
           width: '5vw'
@@ -87,7 +90,7 @@ class Home extends Component {
                   <div>
                     <a href="https://github.com/MJKeo"><img src={GitHub} alt="github" style={icon}/></a>     
                     <a href = {Pdf} target = "_blank"><img src={resumeIcon} alt="resume" style={rezIcon}/></a>       
-                    <a href = {privacyPolicy} target = "_blank"><img src={resumeIcon} alt="privacy Policy" style={rezIcon}/></a>           
+                    <a href = {privacyPolicy} target = "_blank"><img src={resumeIcon} alt="privacy Policy" style={gone}/></a>           
                     <a href="https://linkedin.com/in/michael-keohane"><img src={Linkedin} alt="linkedin" style={icon}/></a>
                   </div>
                 </div>
