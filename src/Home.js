@@ -5,6 +5,7 @@ import GitHub from './images/github.svg';
 import Linkedin from './images/linkedin.png';
 import BGParticles from './BGParticles';
 import Pdf from './myResume.pdf';
+import privacyPolicy from './privacyPolicy.pdf'
 import resumeIcon from './images/resumeIcon.png';
 import './styles.css';
 
@@ -85,7 +86,8 @@ class Home extends Component {
                   </div>
                   <div>
                     <a href="https://github.com/MJKeo"><img src={GitHub} alt="github" style={icon}/></a>     
-                    <a href = {Pdf} target = "_blank"><img src={resumeIcon} alt="resume" style={rezIcon}/></a>           
+                    <a href = {Pdf} target = "_blank"><img src={resumeIcon} alt="resume" style={rezIcon}/></a>       
+                    <a href = {privacyPolicy} target = "_blank"><img src={resumeIcon} alt="privacy Policy" style={rezIcon}/></a>           
                     <a href="https://linkedin.com/in/michael-keohane"><img src={Linkedin} alt="linkedin" style={icon}/></a>
                   </div>
                 </div>
