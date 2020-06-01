@@ -86,7 +86,6 @@ class Home extends Component {
                   <div>
                       <Link to="/AboutMe/"><button ref="option1" type="button" class="static-option-style btn" onMouseOver={() => this.checkInterval()}>About Me</button></Link>
                       <Link to="/Blog/"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Blog</button></Link>
-                      <Link to="/app-support"><button ref="option2" type="button" class="btn static-option-style" onMouseOver={() => this.checkInterval2()}>Test</button></Link>
                   </div>
                   <div>
                     <a href="https://github.com/MJKeo"><img src={GitHub} alt="github" style={icon}/></a>     
