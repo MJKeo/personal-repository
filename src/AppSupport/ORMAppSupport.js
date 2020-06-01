@@ -10,7 +10,26 @@ class ORMAppSupport extends Component {
         this.state = {
           isOpen: false
         };
+
+        this.status = 0; // regular
+        this.checkForRotation = this.checkForRotation.bind(this);
       }
+
+    componentDidMount() {
+        setInterval(this.checkForRotation, 100);
+    }
+
+    checkForRotation() {
+        if (this.status == 0) {
+            if (window.innerHeight < window.innerWidth) {
+                this.setState({}); // force refresh
+            }
+        } else {
+            if (window.innerHeight > window.innerWidth) {
+                this.setState({}); // force refresh
+            }
+        }
+    }
 
     render() {
         const mainBG = {
@@ -21,7 +40,12 @@ class ORMAppSupport extends Component {
         var toRender = <Desktop />
         if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
             console.log("phone")
-            toRender = <Phone />
+            if (window.innerHeight > window.innerWidth) {
+                toRender = <Phone />
+                this.status = 0;
+            } else {
+                this.status = 1;
+            }
         }
         return (
             <div style={mainBG}>
