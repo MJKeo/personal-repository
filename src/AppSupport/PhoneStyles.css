@@ -10,6 +10,8 @@
 
 .main-title {
     font-size: 5vw;
+    font-weight: bold;
+    color: #DC2611;
 }
 
 .logo {
@@ -39,7 +41,7 @@
     height: 5vw;
 }
 
-.button {
+.buttonp {
     color: black;
     font-size: 3vw;
     width: 45vw;
@@ -53,7 +55,7 @@
     text-decoration: underline;
 }
 
-.button:hover {
+.buttonp:hover {
     text-decoration: underline;
     cursor: pointer;
 }
@@ -69,17 +71,24 @@
     height: 0.25vw;
 }
 
-.subheading {
+.subheadingp {
     font-size: 3.5vw;
     color: #DC2611;
     text-decoration: underline;
 }
 
 .text {
+    font-size: 2.2vw;
+    color: black;
+    margin-left: 15px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.regular-text {
     font-size: 2vw;
     color: black;
-    margin-left: 25px;
-    font-weight: bold;
+    margin-left: 15px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -99,7 +108,7 @@
 }
 
 .indented {
-    padding-left: 25px;
+    padding-left: 15px;
 }
 
 .gray {

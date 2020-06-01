@@ -44,14 +44,14 @@ class HowItWorks extends Component {
                     <h1 class="tiny-spacingd"></h1>
                     <h1 class="textd">Adding an exercise is a simple, 2-step process:</h1>
                     <h1 class="tiny-spacingd"></h1>
-                    <h1 class="textd">1- On the home screen, select the "new" button shown in the picture on the left</h1>
+                    <h1 class="regular-textd">1- On the home screen, select the "new" button shown in the picture on the left</h1>
                     <h1 class="tiny-spacingd"></h1>
-                    <h1 class="textd">2- Choose between 2 options for adding an exercise: </h1>
-                        <h1 class="textd indentd">A- Create a custom exercise. You write in the name in the input field on the left, and select what
+                    <h1 class="regular-textd">2- Choose between 2 options for adding an exercise: </h1>
+                        <h1 class="regular-textd indentd">A- Create a custom exercise. You write in the name in the input field on the left, and select what
                         type of exercise it is on the right. This exercise type affects how you can record data, as bodyweight exercises only use
                         your bodyweight, and records how many reps of that exercise you can do with your bodyweight. NOTE: strength standards do not
                         exist for custom exercises.</h1>
-                        <h1 class="textd indentd">B- Choose one of the built in exercises from the list at the bottom. Just tap on any icon to add that exercise to your collection.</h1>
+                        <h1 class="regular-textd indentd">B- Choose one of the built in exercises from the list at the bottom. Just tap on any icon to add that exercise to your collection.</h1>
                     <div class="picture-containerd">
                         <img class="pictured" src={AddExercise1} alt="image failed to load :(" />
                         <img class="pictured" src={AddExercise2} alt="image also failed to load :(" />
@@ -62,10 +62,10 @@ class HowItWorks extends Component {
                     <h1 class="textd">Recording an exercise can be done in two ways. Let's first look at using the Record Activity page.</h1>
                     <h1 class="tiny-spacingd"></h1>
                     <h1 class="textd">On the Record Activity screen, the process is simple</h1>
-                        <h1 class="textd indentd">1- Select which exercise you want to record an activity for (must be an exercise you've already added)</h1>
-                        <h1 class="textd indentd">2- Change the reps and weight to match what you want to submit (NOTE: bodyweight exercises only use your
+                        <h1 class="regular-textd indentd">1- Select which exercise you want to record an activity for (must be an exercise you've already added)</h1>
+                        <h1 class="regular-textd indentd">2- Change the reps and weight to match what you want to submit (NOTE: bodyweight exercises only use your
                         weight, so the weight value cannot be changed for those exercises)</h1>
-                    <h1 class="textd indentd">3- Submit the activity. You'll be prompted with a popup telling you it was successfully submitted, and your ORM</h1>
+                    <h1 class="regular-textd indentd">3- Submit the activity. You'll be prompted with a popup telling you it was successfully submitted, and your ORM</h1>
                     <h1 class="tiny-spacingd"></h1>
                     <div class="picture-containerd">
                         <img class="pictured" src={RecordActivity1} alt="image failed to load :(" />
@@ -93,16 +93,16 @@ class HowItWorks extends Component {
                     <h1 class="tiny-spacingd"></h1>
                     <h1 class="textd">On the edit exercise page there are a couple things you can do. First, there are 3 properties of the exercise that can
                     be edited:</h1>
-                            <h1 class="textd indentd">1- Exercise name can be re-typed if the exercise is a custom exercise. However, for built-in exercises like "Bench Press"
+                            <h1 class="regular-textd indentd">1- Exercise name can be re-typed if the exercise is a custom exercise. However, for built-in exercises like "Bench Press"
                             seen below, you cannot change this property</h1>
-                            <h1 class="textd indentd">2- Exercise type can be re-selected again only if the exercise is a custom one, built-in exercises cannot have this
+                            <h1 class="regular-textd indentd">2- Exercise type can be re-selected again only if the exercise is a custom one, built-in exercises cannot have this
                             changed</h1>
-                            <h1 class="textd indentd">3- Display units are the units you'll see for your graph label, personal best, closest goal (on the home page), records list, and so on.
+                            <h1 class="regular-textd indentd">3- Display units are the units you'll see for your graph label, personal best, closest goal (on the home page), records list, and so on.
                             This can be changed for all exercises regardless of their type, and is the same as the display units editor found in the settings screen</h1>
                     <h1 class="tiny-spacingd"></h1>
                     <h1 class="textd">You can also perform a few actions on this exercise, either:</h1>
-                        <h1 class="textd indentd">A- Go to the edit exercise page to manage your activity (see below section for more)</h1>
-                        <h1 class="textd indentd">B- Delete the exercise entirely. This will remove all recorded activities, goals, and personal bests for this exercise</h1>
+                        <h1 class="regular-textd indentd">A- Go to the edit exercise page to manage your activity (see below section for more)</h1>
+                        <h1 class="regular-textd indentd">B- Delete the exercise entirely. This will remove all recorded activities, goals, and personal bests for this exercise</h1>
                     <h1 class="tiny-spacingd"></h1>
                     <div class="picture-containerd">
                         <img class="pictured" src={ModifyExercise2} alt="image failed to load :(" />

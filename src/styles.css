@@ -28,13 +28,13 @@ body {
 
 .option-style {
     font-size: 6vh !important;
-    animation: textshrink 0.2s;
+    animation: textshrink 0.2s !important;
     color: white!important;
     opacity: 0.75;
 }
 
 .option-style:hover {
-    animation: textgrow 0.2s;
+    animation: textgrow 0.2s !important;
     animation-fill-mode: forwards;  
     color: white!important;
     opacity: 0.75;

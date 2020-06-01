@@ -36,8 +36,10 @@ class Home extends Component {
 
       checkInterval2() {
         var thing = this.refs.option2;
+        console.log("yuh")
         thing.classList.remove("static-option-style");
         thing.classList.add("option-style")
+        console.log(thing.classList)
       }
     render() {
           const centerElement = {

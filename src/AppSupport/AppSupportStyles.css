@@ -83,6 +83,13 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.regular-textd {
+    font-size: 22px;
+    color: black;
+    margin-left: 25px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 .pictured {
     height: 500px;
 }

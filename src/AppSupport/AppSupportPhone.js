@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Logo from '../images/AppSupportLogo.png';
 import How from './HowItWorksPhone.js'
+import Breakdown from "./PageBreakdownPhone.js";
 import Contact from './ContactPhone.js';
 import './PhoneStyles.css';
 
@@ -37,7 +38,7 @@ class AppSupportPhone extends Component {
     render() {
         var toRender = <How />
         if (this.status == 1) {
-            toRender = <h1>Two</h1>
+            toRender = <Breakdown />
         }
 
         return (
@@ -51,8 +52,8 @@ class AppSupportPhone extends Component {
                 <div class="spacer"></div>
                 {/* Here's where we put the navigation buttons */}
                 <div class="flex-row flex-even">
-                    <h1 ref="howAppWorksBtn" class="button button-selected" onClick={this.switchToWorks}>How the App Works</h1>
-                    <h1 ref="breakdownBtn" class="button" onClick={this.switchToBreakdown}>Individual Screen Breakdown</h1>
+                    <h1 ref="howAppWorksBtn" class="buttonp button-selected" onClick={this.switchToWorks}>How the App Works</h1>
+                    <h1 ref="breakdownBtn" class="buttonp" onClick={this.switchToBreakdown}>Individual Screen Breakdown</h1>
                 </div>
                 {/* Main Content */}
                 {toRender}
