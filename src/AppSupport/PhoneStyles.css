@@ -1,0 +1,153 @@
+/* MAIN PAGE */
+.main-bg {
+    width: 100%;
+    min-height: 75vh;
+    margin-top: 2.5vh;
+    margin-left: 0%;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+
+.main-title {
+    font-size: 5vw;
+}
+
+.logo {
+    height: 50px;
+    width: 50px;
+    border-radius: 25px;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-center {
+    justify-content: center;
+}
+
+.flex-even {
+    justify-content: space-evenly;
+}
+
+.small-spacer {
+    height: 2.5vw;
+}
+
+.spacer {
+    height: 5vw;
+}
+
+.button {
+    color: black;
+    font-size: 3vw;
+    width: 45vw;
+    height: 10vw;
+    border: none;
+    font-weight: bold;
+    background: none;
+}
+
+.button-selected {
+    text-decoration: underline;
+}
+
+.button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* HOW IT WORKS */
+.how-div {
+    width: 85%;
+    text-align: left;
+}
+
+.tiny-spacing {
+    height: 0.25vw;
+}
+
+.subheading {
+    font-size: 3.5vw;
+    color: #DC2611;
+    text-decoration: underline;
+}
+
+.text {
+    font-size: 2vw;
+    color: black;
+    margin-left: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.picture {
+    height: 20vh;
+}
+
+.picture-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.picture-separator {
+    width: 50px;
+}
+
+.indented {
+    padding-left: 25px;
+}
+
+.gray {
+    color: gray;
+}
+
+.beginner {
+    color: #652CA1;
+}
+
+.novice {
+    color: #4555AA;
+}
+
+.intermediate {
+    color: #146E01;
+}
+
+.advanced {
+    color: #A77401;
+}
+
+.elite {
+    color: #941E15;
+}
+
+/* CONTACT */
+.contact-bg {
+    width: 101%;
+    height: 100px;
+    background: black;
+    color: white;
+}
+
+.contact-centering-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.copyright-text {
+    font-size: 10px;
+}
+
+.contact-text {
+    font-size: 14px;
+}

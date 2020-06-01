@@ -7,6 +7,7 @@ import Home from './Home';
 import AboutMe from './AboutMe'
 import Blog from './Blog'
 import BlogPage from './BlogPage'
+import AppSupport from './AppSupport/ORMAppSupport.js'
 
 export default class App extends React.Component {
   constructor(props) {
@@ -43,6 +44,7 @@ export default class App extends React.Component {
             <Route path="/AboutMe/" exact component={AboutMe} />
             <Route path="/Blog/" exact component={Blog} />
             <Route path="/read-post" exact component={BlogPage} />
+            <Route path="/app-support" exact component={AppSupport} />
           </Router>
           </div>
         </div>

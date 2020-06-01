@@ -1,0 +1,152 @@
+/* MAIN PAGE */
+.main-bgd {
+    width: 90%;
+    min-height: 75vh;
+    margin-top: 2.5vh;
+    margin-left: 5%;
+}
+
+.flex-rowd {
+    display: flex;
+    flex-direction: row;
+}
+
+.flex-centerd {
+    justify-content: center;
+}
+
+.flex-evend {
+    justify-content: space-evenly;
+}
+
+.logod {
+    width: 150px;
+    height: 150px;
+    border-radius: 75px;
+}
+
+.small-spacerd {
+    height: 2.5vh;
+}
+
+.spacerd {
+    height: 5vh;
+}
+
+.main-titled {
+    font-size: 60px;
+    font-weight: bold;
+    color: #DC2611;
+}
+
+.buttond {
+    color: black;
+    font-size: 32px;
+    width: 450px;
+    height: 120px;
+    border: none;
+    font-weight: bold;
+    background: none;
+}
+
+.button-selectedd {
+    text-decoration: underline;
+}
+
+.buttond:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* HOW IT WORKS */
+.how-divd {
+    width: 85%;
+    margin-left: 7.5%;
+    text-align: left;
+}
+
+.tiny-spacingd {
+    height: 0.25vh;
+}
+
+.subheadingd {
+    font-size: 28px;
+    color: #DC2611;
+    text-decoration: underline;
+}
+
+.textd {
+    font-size: 24px;
+    color: black;
+    margin-left: 25px;
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.pictured {
+    height: 500px;
+}
+
+.picture-containerd {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+.picture-separatord {
+    width: 50px;
+}
+
+.indentedd {
+    padding-left: 25px;
+}
+
+.grayd {
+    color: gray;
+}
+
+.beginnerd {
+    color: #652CA1;
+}
+
+.noviced {
+    color: #4555AA;
+}
+
+.intermediated {
+    color: #146E01;
+}
+
+.advancedd {
+    color: #A77401;
+}
+
+.elited {
+    color: #941E15;
+}
+
+/* CONTACT */
+.contact-bgd {
+    width: 100%;
+    height: 200px;
+    background: black;
+    color: white;
+}
+
+.contact-centering-divd {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+}
+
+.copyright-textd {
+    font-size: 15px;
+}
+
+.contact-textd {
+    font-size: 22px;
+}
