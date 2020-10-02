@@ -1,0 +1,68 @@
+/* Main Div */
+.thumbnail-main-div {
+    /* Positioning */
+    position: relative;
+    /* Sizing */
+    width: 200px;
+    height: 200px;
+    /* Border */
+    border-radius: 10px;
+    border: 2px solid #66FCF1;
+    /* Overflow */
+    overflow: hidden;
+    /* Background */
+    background-color: white;
+    /* Margins */
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 50px;
+    /* Animation */
+    transition: 0.2s;
+}
+
+.thumbnail-main-div:hover {
+    transform: translateY(-5px);
+}
+
+.thumbnail-main-div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Overlay Div */
+.thumbnail-overlay-div {
+    /* Position */
+    position: absolute;
+    top: 0;
+    left: 0px;
+    /* Display */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    /* Sizing */
+    width: 100%;
+    height: 100%;
+    /* Background */
+    opacity: 0;
+    /* Animation */
+    transition: 0.25s ease-in-out;
+}
+
+.thumbnail-overlay-div:hover {
+    opacity: 1;
+    cursor: pointer;
+    background-color: rgba(0,0,0,0.65);
+}
+
+.thumbnail-overlay-div h1 {
+    font-size: 24px;
+    transition: 0.5s;
+    padding: 5px;
+    transform: translateY(10px);
+}
+
+.thumbnail-overlay-div:hover h1 {
+    transform: translateY(0px);
+}

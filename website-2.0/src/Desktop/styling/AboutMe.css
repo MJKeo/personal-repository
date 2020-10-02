@@ -1,0 +1,52 @@
+.about-me-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: left;
+}
+
+@media (min-width:701px){
+    .about-me-text {
+        width: 90vw;
+        max-width: 1000px;
+        margin-top: 25px;
+        opacity: 0;
+        animation: fade-in-shift 0.5s 0.25s ease-out forwards;
+    }
+    
+    .about-me-text h1 {
+        text-indent: 25px;
+        font-size: 22px;
+        margin-bottom: 25px;
+    }
+    
+    .about-me-text h2 {
+        font-size: 18px;
+        margin-top: 45px;
+        text-align: center;
+    }
+}
+
+@media (max-width:700px){
+    .about-me-text {
+        text-align:left;
+        width: 90vw;
+        opacity: 0;
+        animation: fade-in-shift 0.5s 0.25s ease-out forwards;
+        margin-bottom: 100px;
+    }
+
+    .about-me-text h1 {
+        font-size: 18px;
+        margin-bottom: 25px;
+        text-indent: 10px;
+    }
+
+    .about-me-text h2 {
+        font-size: 16px;
+        margin-top: 30px;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+}

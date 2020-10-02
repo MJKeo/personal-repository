@@ -1,0 +1,146 @@
+/* Make the background of the website dark */
+.page {
+  background-color: #161C24;
+}
+
+.App {
+  text-align: center;
+}
+
+/*
+  App-Wide navbar
+*/
+.navbar {
+  /* Positioning */
+  position: relative;
+  top: 0;
+  left: 0;
+  /* Display */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* Sizing */
+  height: 75px;
+  width: 96vw;
+  /* Margins */
+  margin-left: 2vw;
+  /* Borders */
+  border-bottom: 1px solid black;
+  /* Animation */
+  animation: fade-in 0.5s ease-in-out forwards;
+  opacity: 0;
+  z-index: 1;
+}
+
+.navbar-left {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar-face {
+  width: 45px;
+  height: 45px;
+  border: 1px solid white;
+  border-radius: 23px;
+  transition: 0.2s;
+  margin-right: 25px;
+  margin-left: 10px;
+}
+
+.navbar-face:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.navbar h1 {
+  margin: 25px;
+  font-size: 28px;
+  color: #E3E3E3;
+  transition: 0.2s;
+}
+
+.navbar h1:hover {
+  color: white;
+  text-shadow: 0 0 3px rgba(255,255,255,0.5);
+  cursor: pointer;
+}
+
+.navbar-quick-link {
+  height: 50px;
+  width: 30px;
+  object-fit: contain;
+  margin: 10px;
+  transition: 0.2s;
+}
+
+.navbar-quick-link:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+
+/* 
+  App-Wide colors 
+  In order from darkest to lightest
+*/
+
+.black {
+  color: black;
+}
+
+.background {
+  color: #161C24;
+}
+
+.dark-cyan {
+  color: #45A29E;
+}
+
+.cyan {
+  color: #66FCF1;
+}
+
+.off-white {
+  color: #C5C6C7;
+}
+
+.white {
+  color: white;
+}
+
+.dark-gray {
+  color: gray;
+}
+
+/* 
+  App-Wide Animation
+ */
+ @keyframes fade-in {
+   from {
+     opacity: 0;
+   }
+   to {
+    opacity: 1;
+   }
+ }
+
+ @keyframes fade-out {
+  from {
+    opacity: 1;
+  }
+  to {
+   opacity: 0;
+  }
+}
+
+ @keyframes fade-in-shift {
+  from {
+      opacity: 0;
+      transform: translateY(100px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0px);
+  }
+}

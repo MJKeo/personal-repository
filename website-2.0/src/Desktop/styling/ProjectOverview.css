@@ -1,0 +1,24 @@
+.project-overview-main-div {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project-date {
+    font-size: 16px;
+}
+
+.project-text-div {
+    max-width: 1000px;
+    width: 90vw;
+    align-self: center;
+    margin-top: 50px;
+}
+
+.project-description {
+    text-indent: 25px;
+    text-align: left;
+    font-size: 18px;
+    margin-bottom: 25px;
+}

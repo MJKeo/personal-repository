@@ -1,0 +1,138 @@
+.dropdown-div {
+    position: relative;
+}
+
+/* Images */
+
+.dropdown-div img {
+    width: 40px;
+    height: 40px;
+    margin-right: 25px;
+    align-self: center;
+}
+
+.dropdown-div img:hover {
+    cursor: pointer;
+}
+
+/* Item Menu */
+
+.dropdown-items {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 0px;
+    top: 60px;
+    overflow: hidden;
+    height: 0px;
+    background-color: #10151B;
+}
+
+.dropdown-items-row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+.dropdown-items h2 {
+    font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 175px;
+    height: 50px;
+    margin: 0px;
+    text-align: left;
+}
+
+@media (max-width:700px) {
+    .dropdown-items {
+        right: -6px;
+    }
+
+    .dropdown-items-row {
+        height: 80px;
+    }
+
+    .dropdown-items h2 {
+        font-size: 28px;
+        width: 50vw;
+        height: 80px;
+    }
+}
+
+.dropdown-items h2:hover {
+    background-color: #45A29E;
+    color: white;
+}
+
+/* Applying Animations */
+
+.open-drawer {
+    animation: open-drawer 0.25s ease-in-out forwards;
+}
+
+.close-drawer {
+    animation: close-drawer 0.1s ease-in-out forwards;
+}
+
+.rotate-plus {
+    animation: rotate-plus 0.25s 0.1s ease-out forwards;
+}
+
+.unrotate-plus {
+    transform: rotate(0deg);
+}
+
+/* The Actual Animations */
+@media (min-width: 701px) {
+    @keyframes close-drawer {
+        from {
+            height: 200px;
+        }
+        to {
+            height: 0px;
+        }
+    }
+    
+    @keyframes open-drawer {
+        from {
+            height: 0px;
+        }
+        to {
+            height: 200px;
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    @keyframes close-drawer {
+        from {
+            height: 320px;
+        }
+        to {
+            height: 0px;
+        }
+    }
+    
+    @keyframes open-drawer {
+        from {
+            height: 0px;
+        }
+        to {
+            height: 320px;
+        }
+    }
+}
+
+@keyframes rotate-plus {
+    from {
+    }
+    to {
+        transform: rotate(-45deg);
+    }
+}
